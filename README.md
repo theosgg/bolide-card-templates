@@ -21,8 +21,9 @@ can pick one without trying them all.
 2. Copy the theme folder into the program's template folder:
    `moviecards\` for All My Movies, `bookcards\` for All My Books. They are
    next to the program's exe, usually
-   `C:\Program Files (x86)\All My Movies\moviecards\` and
-   `C:\Program Files (x86)\All My Books\bookcards\`.
+   `C:\Program Files (x86)\AllMyMovies\moviecards\` and
+   `C:\Program Files (x86)\AllMyBooks\bookcards\` (writing there needs
+   administrator rights).
 3. In the program: menu **View → HTML template** and pick the folder name.
 
 The program looks for `template.html` in every subfolder; folders without

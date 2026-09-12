@@ -20,8 +20,9 @@ HTML-шаблон: папка с `template.html`, несколькими кар�
 1. Скачайте репозиторий (Code → Download ZIP) или только нужную папку.
 2. Скопируйте папку темы в папку шаблонов программы: `moviecards\` у
    All My Movies, `bookcards\` у All My Books. Они лежат рядом с exe, обычно
-   `C:\Program Files (x86)\All My Movies\moviecards\` и
-   `C:\Program Files (x86)\All My Books\bookcards\`.
+   `C:\Program Files (x86)\AllMyMovies\moviecards\` и
+   `C:\Program Files (x86)\AllMyBooks\bookcards\` (для записи туда нужны
+   права администратора).
 3. В программе: меню **Вид → HTML-шаблон**, выберите имя папки.
 
 Программа ищет `template.html` в каждой подпапке; папки без него (и `_old`)
