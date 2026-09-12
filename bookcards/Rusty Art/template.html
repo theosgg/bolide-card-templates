@@ -1,0 +1,122 @@
+<html>
+<head>
+	<style>
+	body {
+		font-family: Tahoma, 'Segoe UI', Helvetica, Arial, sans-serif;
+		background-color: #150d0f;
+		background-image: url('images/background.jpg');
+		background-repeat: repeat-x;
+		margin: 0;
+		padding: 1.1em;
+		color: #d8cfc4;
+		font-size: 11pt;
+	}
+	a { color: #f0b356; text-decoration: none; }
+	a:hover { color: #ffd08a; text-decoration: underline; }
+
+	table.card {
+		width: 100%;
+		border-collapse: collapse;
+		border: 0.12em solid #6b4a2a;
+	}
+	td.leftcol {
+		width: 17em;
+		vertical-align: top;
+		background-color: #2b2422;
+		border-right: 0.12em solid #6b4a2a;
+		padding: 1.4em 1.2em 1.4em 1.2em;
+	}
+	td.maincol {
+		vertical-align: top;
+		background-color: #1b1513;
+		padding: 0.8em 1.5em 1.2em 1.6em;
+	}
+
+	.cover { width: 13.5em; margin: 0 auto 0.8em auto; text-align: center; }
+	#cover { width: 100%; border: 0.14em solid #e6e6e6; }
+
+	.stars  { text-align: center; margin-bottom: 0.3em; }
+	.hearts { text-align: center; margin-bottom: 0.5em; }
+	.stars a, .hearts a, .short_info a { border: none; }
+
+	.short_info { font-size: 10pt; line-height: 165%; text-align: left; color: #c8bcae; }
+	.short_info b { color: #f2e6d6; font-weight: bold; }
+	.short_info .playrow { margin: 0.5em 0; text-align: center; }
+	.loan { color: #ff8b52; }
+	.loan a { color: #ff8b52; }
+
+	.title { text-transform: uppercase; font-size: 19pt; font-weight: bold; color: #e8a747; margin: 0.3em 0 0.15em 0; }
+	.original_title { font-size: 11pt; color: #a08e78; margin: 0 0 0.9em 0; }
+
+	table.gioupi { border-collapse: collapse; margin-top: 0.5em; }
+	td.fld {
+		text-transform: uppercase;
+		font-size: 9.5pt;
+		font-weight: bold;
+		color: #9a7a4e;
+		text-align: right;
+		vertical-align: top;
+		width: 11em;
+		padding: 0.25em 0.7em 0.25em 0;
+	}
+	td.val { font-size: 11pt; vertical-align: top; padding: 0.25em 0; color: #d8cfc4; }
+	td.authors { min-width: 20em; max-width: 34em; }
+
+	.screenshot { height: auto; }
+	</style>
+</head>
+<body>
+<table class="card">
+<tr>
+<td class="leftcol">
+	<div class="cover"> <img SRC="_cover_" ID="cover" width="100%"> </div>
+	<div class="stars"><!--#rating --></div>
+	<div class="short_info">
+		<div class="hearts"><!--#myrating --></div>
+		<!--#bindingtype_lbl -->: <b><!--#bindingtype --> </b>
+		<br><!--#pages_lbl -->: <b><!--#pages --> </b>
+		<br><!--#language_lbl -->: <b><!--#language --> </b>
+		<br><!--#dimensions_lbl -->: <b><!--#dimensions --> </b>
+		<br><!--#circulation_lbl -->: <b><!--#circulation --> </b>
+		<br><!--#price_lbl -->: <b><!--#price --> </b>
+		<br><!--#location_lbl -->: <b><!--#location --> </b>
+		<br><!--#filesize_lbl -->: <b><!--#filesize --> </b>
+		<br><!--#playtime_lbl -->: <b><!--#playtime --> </b>
+		<div class="playrow"> <!--#playbutton --></div>
+		<div class="loan"><!--#loan_lbl -->: <b><!--#loan --></b></div>
+		<!--#wishlist_lbl -->: <label class="checkbox"><!--#wishlist --></label>
+		<br><!--#unread_lbl -->: <!--#unread -->
+		<br><!--#personalmarks_lbl -->: <!--#personalmarks -->
+		<br>
+		<br> <!--#date_lbl -->: <b><!--#date --> </b>
+		<br> <!--#dateread_lbl -->: <b><!--#dateread --> </b>
+	</div>
+</td>
+<td class="maincol">
+<div class="title">
+<!--#booknum -->.&nbsp;
+<!--#title -->
+</div>
+<div class="original_title">(<!--#originaltitle_lbl -->: <!--#originaltitle -->)</div>
+<table class="gioupi">
+<tr>	<td class="fld"> <!--#authors_lbl -->:</td>		<td class="val authors"> <!--#authors --> </td>	</tr>
+<tr>	<td class="fld"> <!--#editors_lbl -->:</td>		<td class="val"> <!--#editors --> </td>	</tr>
+<tr>	<td class="fld"> <!--#translators_lbl -->:</td>	<td class="val"> <!--#translators --> </td>	</tr>
+<tr>	<td class="fld"> <!--#illustrators_lbl -->:</td>	<td class="val"> <!--#illustrators --> </td>	</tr>
+<tr>	<td class="fld"> <!--#publisher_lbl -->:</td>		<td class="val"> <!--#publisheryear --></td> </tr>
+<tr>	<td class="fld"> <!--#subject_lbl -->:</td>		<td class="val"> <!--#subject --> </td> </tr>
+<tr>	<td class="fld"> ISBN:</td>						<td class="val"> <!--#ISBN --> </td> </tr>
+<tr>	<td class="fld"> <!--#serie_lbl -->:</td>			<td class="val"> <!--#serie --> </td> </tr>
+<tr>	<td class="fld"> <!--#volume_lbl -->:</td>			<td class="val"> <!--#volume --> </td> </tr>
+<tr>	<td class="fld"> <!--#synopsis_lbl -->:</td>		<td class="val"> <!--#synopsis --> </td> </tr>
+<tr>	<td colspan="2" align="right"> <!--#url --> </td> </tr>
+<tr>	<td class="fld"> <!--#comments_lbl -->:</td>		<td class="val"> <!--#comments --> </td> </tr>
+<tr>	<td class="fld"> <!--#contents_lbl -->:</td>		<td class="val"> <!--#contents --> </td> </tr>
+<tr>	<td class="fld"> &nbsp; </td>						<td class="val"><!--#userfield --></td> </tr>
+</table>
+<!--#screenshots width="200" -->
+</td>
+</tr>
+</table>
+</body>
+</html>

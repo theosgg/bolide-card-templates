@@ -1,0 +1,137 @@
+<!-- Movie card, Indian theme. -->
+<!-- High-DPI rework: table layout, pt/em/%% units (no fixed px), CSS panels. -->
+<!-- The old markup framed every block with corner/edge GIFs. HtmlViewer ignores -->
+<!-- background-position and treats repeat-y as repeat, so edge gradients got -->
+<!-- tiled over whole areas. Same skeleton as moviecards/standard now, palette -->
+<!-- unchanged: lavender page, white card, #7E76A5 headings. -->
+<!-- NOTE: CropEmptyFields drops the WHOLE source line of an empty field, -->
+<!-- so every removable placeholder must stay on its own line. -->
+<html>
+<head>
+	<style>
+	body {
+		font-family: Tahoma, Verdana, Arial, sans-serif;
+		background-color: #B6BCD5;
+		background-image: url(img/bkg-page.png);
+		margin: 0;
+		padding: 0.9em;
+		color: #333333;
+		font-size: 10.5pt;
+	}
+	a { color: #1869D1; text-decoration: none; }
+	a:hover { text-decoration: underline; }
+
+	/* ---- overall 2-column card as a table (scales with font/DPI) ---- */
+	table.card { width: 100%; border-collapse: collapse; background-color: #ffffff; }
+	td.leftcol {
+		width: 16.5em;
+		vertical-align: top;
+		background-color: #EEEDF4;
+		padding: 1.1em 1.0em 1.2em 1.0em;
+	}
+	td.maincol {
+		vertical-align: top;
+		background-color: #ffffff;
+		padding: 0.9em 1.4em 1.2em 1.5em;
+	}
+
+	/* ---- cover: container in em, image fills it (width:100% scales) ---- */
+	.cover { width: 13em; margin: 0 auto 0.7em auto; text-align: center; background-color: #ffffff; padding: 0.25em; }
+	#cover { width: 100%; }
+
+	.Raiting { padding: 0.3em 0 0.3em 0; text-align: center; }
+	.Raiting a { border: none; }
+	.MediaInfo { color: #7a7a7b; padding: 0.7em 0 0.7em 0.2em; line-height: 165%; }
+	.CollectionInfo { color: #9693B0; padding: 0.7em 0 0.7em 0.2em; line-height: 165%; }
+	.Loan { color: #E9032E; padding: 0.7em 0 0.7em 0.2em; }
+	.Loan a { color: #E9032E; }
+	.MediaInfo strong, .CollectionInfo strong { color: #7E76A5; }
+
+	/* ---- main column ---- */
+	h1 { font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 16pt; color: #7E76A5; font-weight: normal; margin: 0 0 0.8em 0; }
+	h2 { font-size: 11pt; color: #7E76A5; font-weight: bold; margin: 0; padding: 0; }
+	table.MovieInfo { width: 100%; border-collapse: separate; border-spacing: 0.1em; background-color: #cccccc; }
+	table.MovieInfo td.Name {
+		width: 9.5em;
+		vertical-align: top;
+		background-color: #f7f7f7;
+		color: #777777;
+		font-weight: bold;
+		padding: 0.4em 1.0em 0.4em 1.0em;
+	}
+	table.MovieInfo td { vertical-align: top; background-color: #ffffff; color: #333333; padding: 0.4em 1.0em 0.4em 1.0em; }
+	td.actors { min-width: 20em; max-width: 34em; }
+
+	.Url { text-align: right; padding: 0.7em 0 0 0; }
+	.Description { padding: 1.4em 0 0 0; }
+	.Screenshots { padding: 1.2em 0 0 0; }
+	.Screenshots img { border: 0.08em solid #cccccc; }
+	.Comments { padding: 1.2em 0 0 0; }
+	.Userfields { padding: 1.2em 0 0 0; }
+	.screenshot { height: auto; }
+	ul { padding: 0; margin: 0; list-style-type: none; }
+	.actors_table { width: 100%; }
+	.actors_table td { padding: 0.1em; }
+	</style>
+</head>
+<body>
+<table class="card">
+<tr>
+<td class="leftcol">
+	<div class="cover"> <img SRC="_cover_" ID="cover" width="100%"> </div>
+	<div class="Raiting"><!--#rating --></div>
+	<div class="Raiting"><!--#myrating --></div>
+	<div class="MediaInfo">
+		<strong><!--#mediatype_lbl -->:</strong> <!--#mediatype --><br>
+		(<!--#mediacount -->)<br>
+		<strong><!--#medialabel_lbl -->:</strong> <!--#medialabel --><br>
+		<strong><!--#barcode_lbl -->:</strong> <!--#barcode --><br>
+		<strong><!--#quality_lbl -->:</strong> <!--#quality --><br>
+		<strong><!--#resolution_lbl -->:</strong> <!--#resolution --><br>
+		<strong><!--#aspectratio_lbl -->:</strong> <!--#aspectratio --><br>
+		<strong><!--#filesize_lbl -->:</strong> <!--#filesize --><br>
+		<strong><!--#duration_lbl -->:</strong> <!--#duration --><br>
+		<strong><!--#subtitles_lbl -->:</strong> <!--#subtitles --><br>
+		<strong><!--#vidinfo_lbl -->:</strong> <!--#vidinfo --><br>
+		<strong><!--#audinfo_lbl -->:</strong> <!--#audinfo --><br>
+	</div>
+	<div class="Raiting"><!--#playbutton --></div>
+	<div class="CollectionInfo">
+		<strong><!--#movienum_lbl -->:</strong> <!--#movienum --><br>
+		<strong><!--#date_lbl -->:</strong> <!--#date --><br>
+		<strong><!--#medialocation_lbl -->:</strong> <!--#medialocation --><br>
+		<strong><!--#personalmarks_lbl -->:</strong> <!--#personalmarks --><br>
+		<strong><!--#wishlist_lbl -->:</strong> <!--#wishlist --><br>
+		<strong><!--#seen_lbl -->:</strong> <!--#seen --><br>
+		<strong><!--#price_lbl -->:</strong> <!--#price --><br>
+	</div>
+	<div class="Loan">
+		<strong><!--#loan_lbl -->:</strong> <!--#loan -->
+	</div>
+</td>
+<td class="maincol">
+<h1><!--#title --></h1>
+<table class="MovieInfo">
+<tr>	<td class="Name"><!--#originaltitle_lbl -->:</td>	<td><h2><!--#originaltitle --></h2></td> </tr>
+<tr>	<td class="Name"><!--#country_lbl -->:</td>	<td><!--#country --></td> </tr>
+<tr>	<td class="Name"><!--#year_lbl -->:</td>	<td><!--#year --></td> </tr>
+<tr>	<td class="Name"><!--#genre_lbl -->:</td>	<td><!--#genre --></td> </tr>
+<tr>	<td class="Name"><!--#actors_lbl -->:</td>	<td class="actors"><!--#actors --></td> </tr>
+<tr>	<td class="Name"><!--#director_lbl -->:</td>	<td><!--#director --></td> </tr>
+<tr>	<td class="Name"><!--#scenario_lbl -->:</td>	<td><!--#scenario --></td> </tr>
+<tr>	<td class="Name"><!--#studio_lbl -->:</td>	<td><!--#studio --></td> </tr>
+<tr>	<td class="Name">MPAA:</td>	<td><!--#mpaa --></td> </tr>
+</table>
+<div class="Url"><!--#url --></div>
+<div class="Url"><!--#similar --></div>
+<div class="Description"><!--#description --></div>
+<div class="Description"><!--#episodes --></div>
+<div class="Url"><!--#trailer_lbl --> - <!--#trailer --></div>
+<div class="Screenshots"><!--#screenshots width="100" --></div>
+<div class="Comments"><strong><!--#comments_lbl -->:</strong> <!--#comments --></div>
+<div class="Userfields"><!--#userfield --></div>
+</td>
+</tr>
+</table>
+</body>
+</html>

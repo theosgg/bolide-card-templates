@@ -1,0 +1,140 @@
+﻿<html>
+<head>
+<style type="text/css">
+	body {
+		font-family: 'Segoe UI', Sylfaen, Tahoma, sans-serif;
+		background-color: #000000;
+		color: #d9d9d9;
+		font-size: 11pt;
+		margin: 0;
+		padding: 1em 1.4em 1.4em 1.4em;
+	}
+	a         { color: #6ea8dc; text-decoration: none; }
+	a:hover   { color: #ffffff; text-decoration: none; }
+	b, strong { color: #ffffff; font-weight: bold; }
+
+	h1 {
+		font-family: 'Century Gothic', 'Segoe UI', sans-serif;
+		font-size: 20pt;
+		font-weight: normal;
+		color: #ffffff;
+		margin: 0 0 0.2em 0;
+		line-height: 130%;
+	}
+	h2 {
+		font-family: 'Century Gothic', 'Segoe UI', sans-serif;
+		font-size: 13pt;
+		font-weight: normal;
+		color: #bfbfbf;
+		margin: 0 0 0.8em 0;
+	}
+
+	table.card { width: 100%; border-collapse: collapse; }
+	td.leftcol { width: 16.5em; vertical-align: top; padding-right: 1.4em; }
+	td.maincol { vertical-align: top; }
+
+	/* ---- обложка: контейнер в em, картинка тянется на 100% ---- */
+	.cover { width: 14.5em; margin: 0 auto; text-align: center; }
+	#cover { width: 100%; border: 0.3em solid #262626; }
+
+	.rate { text-align: center; padding: 0.5em 0 0 0; }
+	.rate a { border: none; text-decoration: none; }
+
+	/* ---- светлая плашка под обложкой: была плитками TableMiddle.jpg ---- */
+	.mediapanel {
+		background-color: #cfc8bc;          /* приглушено с #e8e3dc */
+		border: 0.08em solid #55504a;
+		color: #1a1a1a;
+		text-align: center;
+		font-size: 10pt;
+		line-height: 165%;
+		padding: 0.6em 0.8em;
+		margin-top: 0.9em;
+	}
+	.mediapanel a { color: #1a1a1a; text-decoration: underline; }
+	.mediapanel b { color: #000000; }
+
+	.sideinfo { font-size: 10pt; line-height: 175%; padding: 0.8em 0.2em 0 0.2em; }
+	.sideinfo b { color: #ffffff; }
+	.loan { color: #ff6b6b; }
+	.loan a { color: #ff6b6b; }
+
+	/* ---- главная колонка ---- */
+	table.props { border-collapse: collapse; margin-top: 0.4em; }
+	table.props td { font-size: 11pt; vertical-align: top; padding: 0.22em 0.6em 0.22em 0; }
+	table.props td.lbl { white-space: nowrap; color: #8f8f8f; }
+	.section { border-top: 0.08em solid #3a3a3a; margin-top: 1.2em; padding-top: 0.7em; }
+	.section .head { color: #8f8f8f; font-weight: bold; }
+
+	/* ---- скриншоты: красная рамка - фирменный акцент старого оформления ---- */
+	.shots { border-top: 0.15em solid #a01010; margin-top: 1.4em; padding-top: 0.9em; }
+	.shots img { border: 0.15em solid #a01010; }
+	.screenshot { height: 8em; }
+</style>
+</head>
+<body>
+
+<h1>
+<!--#movienum -->.
+<!--#title -->
+</h1>
+<h2><!--#originaltitle --></h2>
+
+<table class="card">
+<tr>
+<td class="leftcol">
+	<div class="cover"><img SRC="_cover_" ID="cover" width="100%"></div>
+	<!-- рейтинги внутри плашки, как в старом оформлении (строки TableMiddle):
+	     заодно плашка не остаётся пустой полосой, когда медиа-поля не заполнены -->
+	<div class="mediapanel">
+		<div class="rate"><!--#rating --></div>
+		<div class="rate"><!--#myrating --></div>
+		<!--#mediatype -->
+		(<!--#mediacount -->)
+		<br><!--#medialabel_lbl -->: <b><!--#medialabel --></b>
+		<br><!--#medialocation_lbl -->: <b><!--#medialocation --></b>
+		<br><!--#trailer_lbl -->: <!--#trailer -->
+		<br><!--#localpath -->
+	</div>
+	<div class="sideinfo">
+		<!--#duration_lbl -->: <b><!--#duration --></b>
+		<br><!--#filesize_lbl -->: <b><!--#filesize --></b>
+		<br><!--#resolution_lbl -->: <b><!--#resolution --></b>
+		<br><!--#quality_lbl -->: <b><!--#quality --></b>
+		<br><!--#subtitles_lbl -->: <b><!--#subtitles --></b>
+		<br><!--#aspectratio_lbl -->: <b><!--#aspectratio --></b>
+		<div class="rate"><!--#playbutton --></div>
+		<div class="loan"><!--#loan_lbl -->: <b><!--#loan --></b></div>
+		<!--#wishlist_lbl -->: <!--#wishlist -->
+		<br><!--#seen_lbl -->: <!--#seen -->
+		<br><!--#date_lbl -->: <b><!--#date --></b>
+		<br><!--#url -->
+	</div>
+</td>
+<td class="maincol">
+	<table class="props">
+	<tr><td class="lbl"><!--#year_lbl -->:</td><td><!--#year --></td></tr>
+	<tr><td class="lbl"><!--#country_lbl -->:</td><td><!--#country --></td></tr>
+	<tr><td class="lbl"><!--#genre_lbl -->:</td><td><!--#genre --></td></tr>
+	<tr><td class="lbl"><!--#director_lbl -->:</td><td><!--#director --></td></tr>
+	<tr><td class="lbl"><!--#scenario_lbl -->:</td><td><!--#scenario --></td></tr>
+	<tr><td class="lbl"><!--#actors_lbl -->:</td><td><!--#actors --></td></tr>
+	<tr><td class="lbl"><!--#studio_lbl -->:</td><td><!--#studio --></td></tr>
+	<tr><td class="lbl">MPAA:</td><td><!--#mpaa --></td></tr>
+	<tr><td class="lbl"><!--#barcode_lbl -->:</td><td><!--#barcode --></td></tr>
+	<tr><td class="lbl"><!--#personalmarks_lbl -->:</td><td><!--#personalmarks --></td></tr>
+	</table>
+	<!-- url/userfield/similar НЕ во вложенной таблице: ссылка с длинным href внутри неё сжимает внешнюю таблицу width:100% примерно до 85% (дефект вьюера, найден бинарным поиском) -->
+	<div><!--#similar --></div>
+
+	<div class="section"><!--#description --></div>
+	<div class="section"><span class="head"><!--#comments_lbl -->:</span> <!--#comments --></div>
+	<div class="section"><!--#userfield --></div>
+	<div class="section"><!--#episodes --></div>
+	<div class="shots"><!--#screenshots --></div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

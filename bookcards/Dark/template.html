@@ -1,0 +1,124 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>All My Books :: Book Card</title>
+<style type="text/css">
+body {
+	font-family: 'Century Gothic', Gotham, 'Segoe UI', Helvetica, Arial, sans-serif;
+	background-color: #1e1e1e;
+	margin: 0;
+	padding: 0 1.2em 1.2em 0;
+	color: #ffffff;
+	font-size: 11pt;
+}
+a { text-decoration: none; color: #ffffff; }
+a:hover { text-decoration: underline; }
+
+table.card { width: 100%; border-collapse: collapse; }
+
+td.titlebar {
+	text-align: center;
+	border-bottom: 0.12em solid #3d3d3d;
+	padding: 0.5em 0 0.7em 0;
+}
+h1 { font-size: 26pt; font-weight: bold; color: #cc0000; margin: 0; line-height: 125%; }
+
+td.leftcol {
+	width: 17em;
+	vertical-align: top;
+	text-align: center;
+	border-right: 0.12em solid #3d3d3d;
+	padding: 1.4em 1.2em 1.4em 1.2em;
+}
+td.maincol { vertical-align: top; padding: 0.6em 0 1.2em 1.6em; }
+
+.cover { width: 13.5em; margin: 0 auto 0.6em auto; text-align: center; }
+#cover { width: 100%; border: 0; }
+
+div.rating { margin: 0.5em 0; text-align: center; }
+div.rating a { border: none; }
+
+div.mediainfo, div.collectioninfo {
+	font-size: 10pt; text-align: left; line-height: 175%;
+	padding: 0 0.3em; margin: 0.8em 0 0 0;
+}
+div.mediainfo { color: #ffffff; }
+div.collectioninfo { color: #dcdcdc; }
+span.mediainfo_labels, span.collectioninfo_labels { font-weight: bold; color: #a4a4a4; }
+
+h2 { font-size: 17pt; font-weight: bold; color: #cc0000; text-align: left; margin: 0 0 0.35em 0; }
+h2 a { color: #cc0000; }
+h2 a:hover { color: #cc0000; }
+
+table.BookInfo { width: 100%; border: none; border-collapse: collapse; border-top: 0.12em solid #3d3d3d; margin: 0.9em 0; padding-top: 0.5em; }
+table.BookInfo td { font-size: 10.5pt; color: #ffffff; text-align: left; padding: 0.2em 0; }
+span.Name { font-size: 10.5pt; color: #a4a4a4; font-weight: bold; }
+
+div.Url { text-align: right; font-size: 10pt; color: #ea6904; padding: 0.3em 0; }
+div.Url a { color: #ea6904; }
+div.Url img { border: 0; margin-right: 0.5em; vertical-align: middle; }
+
+div.Description { color: #dcdcdc; font-size: 10.5pt; font-family: Verdana, Tahoma, Arial, sans-serif; text-align: left; border-top: 0.12em solid #3d3d3d; padding: 1em 0; }
+div.Comments { color: #c0c0c0; font-size: 10.5pt; font-family: Verdana, Tahoma, Arial, sans-serif; text-align: left; padding: 0.9em 0; }
+span.Comments_label { color: #aabcce; font-size: 10.5pt; font-weight: bold; }
+div.Screenshots { padding: 0.9em 0; }
+div.Screenshots img { border: none; }
+div.Userfields { color: #c0c0c0; font-size: 10.5pt; text-align: left; padding: 0.9em 0; }
+.screenshot { height: auto; }
+</style>
+</head>
+
+<body>
+<table class="card">
+  <tr>
+    <td class="titlebar" colspan="2"><h1><!--#title --></h1></td>
+  </tr>
+  <tr>
+    <td class="leftcol">
+      <div class="cover"><img SRC="_cover_" ID="cover" width="100%" alt=""></div>
+      <div class="rating"><!--#rating --></div>
+      <div class="rating"><!--#myrating --></div>
+      <div class="mediainfo">
+        <span class="mediainfo_labels"><!--#bindingtype_lbl -->:</span> <!--#bindingtype --><br>
+        <span class="mediainfo_labels">ISBN:</span> <!--#ISBN --><br>
+        <span class="mediainfo_labels"><!--#dimensions_lbl -->:</span> <!--#dimensions --><br>
+        <span class="mediainfo_labels"><!--#circulation_lbl -->:</span> <!--#circulation --><br>
+        <span class="mediainfo_labels"><!--#pages_lbl -->:</span> <!--#pages --><br>
+        <span class="mediainfo_labels"><!--#language_lbl -->:</span> <!--#language --><br>
+      </div>
+      <div class="collectioninfo">
+        <span class="collectioninfo_labels"><!--#booknum_lbl -->:</span> <!--#booknum --><br>
+        <span class="collectioninfo_labels"><!--#date_lbl -->:</span> <!--#date --><br>
+        <span class="collectioninfo_labels"><!--#location_lbl -->:</span> <!--#location --><br>
+        <span class="collectioninfo_labels"><!--#personalmarks_lbl -->:</span> <!--#personalmarks --><br>
+        <span class="collectioninfo_labels"><!--#wishlist_lbl -->:</span> <!--#wishlist --><br>
+        <span class="collectioninfo_labels"><!--#unread_lbl -->:</span> <!--#unread --><br>
+        <span class="collectioninfo_labels"><!--#loan_lbl -->:</span> <!--#loan --><br>
+        <span class="collectioninfo_labels"><!--#price_lbl -->:</span> <!--#price --><br>
+        <span class="collectioninfo_labels"><!--#filesize_lbl -->:</span> <!--#filesize --><br>
+      </div>
+    </td>
+    <td class="maincol">
+      <h2><!--#serie --> <!--#volume --></h2>
+      <table class="BookInfo">
+        <tr><td><span class="Name"><!--#originaltitle_lbl -->:</span> <!--#originaltitle --></td></tr>
+        <tr><td><span class="Name"><!--#year_lbl -->:</span> <!--#year --></td></tr>
+        <tr><td><span class="Name"><!--#subject_lbl -->:</span> <!--#subject --></td></tr>
+        <tr><td><span class="Name"><!--#authors_lbl -->:</span> <!--#authors --></td></tr>
+        <tr><td><span class="Name"><!--#editors_lbl -->:</span> <!--#editors --></td></tr>
+        <tr><td><span class="Name"><!--#translators_lbl -->:</span> <!--#translators --></td></tr>
+        <tr><td><span class="Name"><!--#illustrators_lbl -->:</span> <!--#illustrators --></td></tr>
+        <tr><td><span class="Name"><!--#publisher_lbl -->:</span> <!--#publisher --></td></tr>
+      </table>
+      <div class="Url"><img src="images/ico_url.png" alt="" width="18" height="18"><!--#url --></div>
+      <div class="Description"><!--#synopsis --></div>
+      <div class="Comments"><span class="Comments_label"><!--#comments_lbl -->:</span> <!--#comments --></div>
+      <div class="Screenshots"><!--#screenshots width="200" --></div>
+      <div class="Comments"><span class="Comments_label"><!--#contents_lbl -->:</span> <!--#contents --></div>
+      <div class="Userfields"><!--#userfield --></div>
+      <div class="Comments" align="center"><!--#playbutton --></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

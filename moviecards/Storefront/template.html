@@ -1,0 +1,134 @@
+﻿<html>
+<head>
+<meta charset="utf-8">
+<title>Movie Card</title>
+<style type="text/css">
+body {
+	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+	color: #0f1111;
+	font-size: 11pt;
+	line-height: 150%;
+	margin: 0;
+	padding: 1.2em;
+}
+a       { color: #007185; text-decoration: none; }
+a:hover { color: #c7511f; text-decoration: underline; }
+
+table.card { width: 100%; border-collapse: collapse; }
+td.covercol { vertical-align: top; padding-right: 1.6em; }
+td.maincol  { vertical-align: top; padding-right: 1.6em; }
+td.buycol   { vertical-align: top; }
+
+.cover { width: 15em; text-align: center; }
+#cover { width: 100%; }
+.thumbs { padding-top: 0.8em; text-align: center; }
+
+h1 { font-size: 20pt; font-weight: normal; color: #0f1111; margin: 0 0 0.15em 0; line-height: 128%; }
+.byline { font-size: 12pt; margin-bottom: 0.3em; }
+.subtitle { font-size: 11pt; color: #565959; margin-bottom: 0.3em; }
+.rate { padding: 0.2em 0; }
+.rate a { border: none; }
+
+.rule { border-top: 0.08em solid #e7e7e7; margin-top: 1em; padding-top: 0.7em; }
+h2 { font-size: 13pt; font-weight: bold; color: #0f1111; margin: 0 0 0.4em 0; }
+.body { font-size: 11pt; line-height: 165%; }
+
+table.specs { width: 100%; border-collapse: collapse; }
+table.specs td { vertical-align: top; padding: 0.2em 0.6em 0.2em 0; font-size: 10.5pt; }
+td.lbl { white-space: nowrap; font-weight: bold; color: #0f1111; }
+td.val { color: #0f1111; }
+
+.buybox {
+	border: 0.08em solid #d5d9d9;
+	background-color: #ffffff;
+	padding: 1em;
+}
+.price { font-size: 18pt; color: #b12704; margin-bottom: 0.4em; }
+.instock { color: #007600; font-size: 12pt; margin-bottom: 0.5em; }
+.onloan  { color: #b12704; font-size: 12pt; margin-bottom: 0.5em; }
+.playbtn {
+	background-color: #ffd814;
+	border: 0.08em solid #fcd200;
+	text-align: center;
+	padding: 0.5em;
+	margin: 0.6em 0;
+}
+.buybox .row { font-size: 10pt; padding: 0.15em 0; }
+.buybox .k { color: #565959; }
+.screenshot { height: auto; }
+</style>
+</head>
+<body>
+
+<table class="card">
+<tr>
+<td class="covercol" width="30%">
+	<div class="cover"><img SRC="_cover_" ID="cover" width="100%" alt=""></div>
+	<div class="thumbs"><!--#screenshots width="90" --></div>
+</td>
+
+<td class="maincol" width="40%">
+	<h1><!--#title --></h1>
+	<div class="subtitle"><!--#originaltitle --></div>
+	<div class="byline"><!--#director_lbl -->: <!--#director --></div>
+	<div class="rate">
+<!--#rating -->
+<!--#myrating -->
+</div>
+	<div class="subtitle">
+	<!--#year -->
+	&nbsp;|&nbsp; <!--#genre -->
+	&nbsp;|&nbsp; <!--#duration -->
+	</div>
+	<div class="subtitle"><!--#country --></div>
+
+	<div class="rule"><h2><!--#description_lbl --></h2><div class="body"><!--#description --></div></div>
+	<div class="rule"><h2><!--#actors_lbl --></h2><div class="body"><!--#actors --></div></div>
+	<div class="rule"><h2><!--#comments_lbl --></h2><div class="body"><!--#comments --></div></div>
+	<div class="rule"><div class="body"><!--#episodes --></div></div>
+
+	<div class="rule">
+	<table class="specs">
+		<tr><td class="lbl"><!--#scenario_lbl --></td><td class="val"><!--#scenario --></td></tr>
+		<tr><td class="lbl"><!--#studio_lbl --></td><td class="val"><!--#studio --></td></tr>
+		<tr><td class="lbl">MPAA</td><td class="val"><!--#mpaa --></td></tr>
+		<tr><td class="lbl"><!--#mediatype_lbl --></td><td class="val"><!--#mediatype -->
+(<!--#mediacount -->)
+</td></tr>
+		<tr><td class="lbl"><!--#medialabel_lbl --></td><td class="val"><!--#medialabel --></td></tr>
+		<tr><td class="lbl"><!--#duration_lbl --></td><td class="val"><!--#duration --></td></tr>
+		<tr><td class="lbl"><!--#filesize_lbl --></td><td class="val"><!--#filesize --></td></tr>
+		<tr><td class="lbl"><!--#resolution_lbl --></td><td class="val"><!--#resolution --></td></tr>
+		<tr><td class="lbl"><!--#quality_lbl --></td><td class="val"><!--#quality --></td></tr>
+		<tr><td class="lbl"><!--#aspectratio_lbl --></td><td class="val"><!--#aspectratio --></td></tr>
+		<tr><td class="lbl"><!--#subtitles_lbl --></td><td class="val"><!--#subtitles --></td></tr>
+		<tr><td class="lbl"><!--#vidinfo_lbl --></td><td class="val"><!--#vidinfo --></td></tr>
+		<tr><td class="lbl"><!--#audinfo_lbl --></td><td class="val"><!--#audinfo --></td></tr>
+		<tr><td class="lbl"><!--#barcode_lbl --></td><td class="val"><!--#barcode --></td></tr>
+	</table>
+	<div><!--#trailer_lbl -->: <!--#trailer --></div>
+	<div><!--#userfield --></div>
+	</div>
+</td>
+
+<td class="buycol" width="30%">
+	<div class="buybox">
+		<div class="price"><!--#price --></div>
+		<div class="instock"><!--#medialocation_lbl -->: <!--#medialocation --></div>
+		<div class="onloan"><!--#loan_lbl -->: <!--#loan --></div>
+		<div class="playbtn"><!--#playbutton --></div>
+		<div class="row"><span class="k"><!--#movienum_lbl -->:</span> <!--#movienum --></div>
+		<div class="row"><span class="k"><!--#wishlist_lbl -->:</span> <!--#wishlist --></div>
+		<div class="row"><span class="k"><!--#seen_lbl -->:</span> <!--#seen --></div>
+		<div class="row"><span class="k"><!--#date_lbl -->:</span> <!--#date --></div>
+		<div class="row"><span class="k"><!--#personalmarks_lbl -->:</span> <!--#personalmarks --></div>
+		<div class="row"><!--#url --></div>
+		<div class="row"><!--#similar --></div>
+	</div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

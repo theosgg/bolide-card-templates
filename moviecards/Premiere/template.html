@@ -1,0 +1,145 @@
+﻿<html>
+<head>
+<meta charset="utf-8">
+<title>Movie Card</title>
+<style type="text/css">
+body {
+	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+	background-color: #141414;
+	color: #d2d2d2;
+	font-size: 11pt;
+	line-height: 155%;
+	margin: 0;
+	padding: 1.4em;
+}
+a       { color: #d2d2d2; text-decoration: none; }
+a:hover { color: #e50914; text-decoration: none; }
+b, strong { color: #ffffff; }
+
+table.hero { width: 100%; border-collapse: collapse; }
+td.postercol { width: 17em; vertical-align: top; padding-right: 1.8em; }
+td.infocol   { vertical-align: top; }
+
+/* ---- постер ---- */
+.cover { width: 15.5em; text-align: center; }
+#cover { width: 100%; border: 0.08em solid #303030; }
+.under { text-align: center; padding-top: 0.6em; }
+.under a { border: none; }
+
+/* ---- заголовок и мета ---- */
+h1 { font-size: 26pt; font-weight: bold; color: #ffffff; margin: 0 0 0.1em 0; line-height: 120%; }
+.orig { font-size: 12pt; color: #8c8c8c; margin-bottom: 0.6em; }
+.meta { font-size: 10.5pt; color: #a3a3a3; margin-bottom: 0.3em; }
+.meta b { color: #ffffff; font-weight: normal; }
+.match { color: #46d369; font-weight: bold; }         /* зелёный "рейтинг" сервиса */
+.mpaa {
+	border: 0.08em solid #8c8c8c;
+	color: #a3a3a3;
+	font-size: 9.5pt;
+	padding: 0.05em 0.45em;
+}
+.rate { margin: 0.5em 0; }
+.rate a { border: none; }
+
+.desc { font-size: 12pt; line-height: 165%; color: #e6e6e6; margin-top: 0.8em; }
+
+/* ---- секции с красной планкой ---- */
+h2 {
+	border-left: 0.3em solid #e50914;
+	padding-left: 0.55em;
+	font-size: 13pt;
+	font-weight: bold;
+	color: #ffffff;
+	margin: 1.6em 0 0.5em 0;
+}
+.grey { color: #8c8c8c; }
+.grey b { color: #d2d2d2; font-weight: normal; }
+
+/* ---- нижняя таблица деталей ---- */
+table.details { border-collapse: collapse; }
+table.details td { vertical-align: top; font-size: 10.5pt; padding: 0.22em 0.7em 0.22em 0; }
+table.details td.lbl { white-space: nowrap; color: #8c8c8c; }
+table.details td.val { color: #e6e6e6; }
+.loanline { color: #e50914; font-weight: bold; margin-top: 0.6em; }
+.loanline a { color: #e50914; }
+.screenshot { height: 11em; }
+</style>
+</head>
+<body>
+
+<table class="hero">
+<tr>
+<td class="postercol">
+	<div class="cover"><img SRC="_cover_" ID="cover" width="100%" alt=""></div>
+	<div class="under"><!--#playbutton --></div>
+	<div class="under grey">#<!--#movienum --></div>
+</td>
+<td class="infocol">
+	<h1><!--#title --></h1>
+	<div class="orig"><!--#originaltitle --></div>
+	<div class="meta">
+		<span class="match"><!--#rating --></span>
+		&nbsp;<b><!--#year --></b>
+		&nbsp;<span class="mpaa"><!--#mpaa --></span>
+		&nbsp;<b><!--#duration --></b>
+		&nbsp;<!--#quality -->
+		&nbsp;<!--#resolution -->
+	</div>
+	<div class="meta">
+		<!--#genre -->
+		&nbsp;&middot;&nbsp; <!--#country -->
+	</div>
+	<div class="rate"><!--#myrating --></div>
+	<div class="loanline"><!--#loan_lbl -->: <!--#loan --></div>
+
+	<div class="desc"><!--#description --></div>
+
+	<div class="meta" style="margin-top:1em;">
+		<span class="grey"><!--#director_lbl -->:</span> <b><!--#director --></b>
+	</div>
+	<div class="meta">
+		<span class="grey"><!--#scenario_lbl -->:</span> <b><!--#scenario --></b>
+	</div>
+	<div class="meta">
+		<span class="grey"><!--#studio_lbl -->:</span> <b><!--#studio --></b>
+	</div>
+
+	<!-- заголовок и текст секции держим на ОДНОЙ строке: CropEmptyFields
+	     удаляет строку целиком, иначе пустое поле оставляло бы висеть
+	     заголовок с красной планкой без содержимого -->
+	<div><h2><!--#actors_lbl --></h2><div class="grey"><!--#actors --></div></div>
+	<div><h2><!--#episodes_lbl --></h2><div class="grey"><!--#episodes --></div></div>
+	<div><h2><!--#comments_lbl --></h2><div class="grey"><!--#comments --></div></div>
+
+	<div style="margin-top:1.4em;"><!--#screenshots --></div>
+
+	<h2>Info</h2>
+	<table class="details">
+		<tr><td class="lbl"><!--#mediatype_lbl --></td><td class="val"><!--#mediatype -->
+(<!--#mediacount -->)
+</td></tr>
+		<tr><td class="lbl"><!--#medialabel_lbl --></td><td class="val"><!--#medialabel --></td></tr>
+		<tr><td class="lbl"><!--#medialocation_lbl --></td><td class="val"><!--#medialocation --></td></tr>
+		<tr><td class="lbl"><!--#filesize_lbl --></td><td class="val"><!--#filesize --></td></tr>
+		<tr><td class="lbl"><!--#subtitles_lbl --></td><td class="val"><!--#subtitles --></td></tr>
+		<tr><td class="lbl"><!--#aspectratio_lbl --></td><td class="val"><!--#aspectratio --></td></tr>
+		<tr><td class="lbl"><!--#vidinfo_lbl --></td><td class="val"><!--#vidinfo --></td></tr>
+		<tr><td class="lbl"><!--#audinfo_lbl --></td><td class="val"><!--#audinfo --></td></tr>
+		<tr><td class="lbl"><!--#barcode_lbl --></td><td class="val"><!--#barcode --></td></tr>
+		<tr><td class="lbl"><!--#price_lbl --></td><td class="val"><!--#price --></td></tr>
+		<tr><td class="lbl"><!--#wishlist_lbl --></td><td class="val"><!--#wishlist --></td></tr>
+		<tr><td class="lbl"><!--#seen_lbl --></td><td class="val"><!--#seen --></td></tr>
+		<tr><td class="lbl"><!--#personalmarks_lbl --></td><td class="val"><!--#personalmarks --></td></tr>
+		<tr><td class="lbl"><!--#date_lbl --></td><td class="val"><!--#date --></td></tr>
+	</table>
+	<!-- url/userfield/similar НЕ во вложенной таблице: ссылка с длинным href внутри неё сжимает внешнюю таблицу width:100% примерно до 85% (дефект вьюера, найден бинарным поиском) -->
+	<div class="meta"><span class="grey"><!--#trailer_lbl -->:</span> <!--#trailer --></div>
+	<div class="meta"><!--#userfield --></div>
+	<div class="meta"><!--#url --></div>
+	<div class="meta"><!--#similar --></div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

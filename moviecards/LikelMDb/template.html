@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fafafa;
+        font-size: 11pt;
+    }
+    .wrappet_outer {
+        background-color: #fafafa;
+        padding: 1.2em 1em;
+    }
+    .header {
+        background-color: #333333;
+        color: white;
+    }
+    .header td { padding: 0.6em 1.2em 0 1.2em; }
+    h1 {
+        font-size: 26pt;
+        font-weight: normal;
+        margin: 0;
+    }
+    h1 a, span {
+        font-size: 22pt;
+        color: silver;
+    }
+    h1 a:hover {
+        color: #63c9ff;
+    }
+    p {
+        margin: 0;
+    }
+    /* обложка: контейнер в em, картинка тянется на 100% ширины */
+    .cover { width: 16em; }
+    #cover { width: 100%; }
+    .ico {
+        text-align: right;
+    }
+    .icotext {
+        margin-right: 2.5em;
+    }
+    .original_tittle {
+        color: silver;
+        font-size: 15pt;
+        font-weight: 100;
+        padding-bottom: 0.3em;
+    }
+    .original_tittle a {
+        color: silver;
+        text-decoration: none;
+    }
+    .original_tittle a:hover {
+        color: #63c9ff;
+        text-decoration: underline;
+    }
+    .actors {
+        color: silver;
+        font-size: 12pt;
+        padding-bottom: 0.3em;
+        padding-left: 0.8em;
+        text-align: left;
+    }
+    .actors a {
+        color: silver;
+        text-decoration: none;
+    }
+    .actors a:hover {
+        color: #63c9ff;
+        text-decoration: underline;
+    }
+    .text_content {
+        padding: 0.8em 2.5em 2.5em;
+        color: #333;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    .text_content p {
+        padding-bottom: 1em;
+        line-height: 1.3;
+    }
+    .text_content a {
+        color: #136CB2;
+        text-decoration: none;
+    }
+    .text_content a:hover {
+        text-decoration: underline;
+        color: #136CB2;
+    }
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+    .direct {
+        font-size: 12pt;
+        font-weight: bold;
+        color: #333333;
+        margin-right: 0.6em;
+    }
+    .episode {
+        font-size: 12pt;
+        font-weight: bold;
+        color: #333333;
+        margin-right: 0.6em;
+    }
+    .actors_table td { padding: 0 2em 0.1em 0; }
+</style>
+<body bgcolor="#fafafa">
+<div class="wrappet_outer">
+    <table class="header" width="100%" cellpadding="0" cellspacing="0">
+        <tr class="title">
+            <td colspan="2" style="width: 65%;">
+                <h1>
+                    <!--#movienum -->.&nbsp;
+                    <!--#title -->
+                    <span>(<!--#year -->)</span>
+                </h1>
+            </td>
+            <td class="ico">
+                <div class="icotext">
+                    <!--#rating -->
+                    <br><!--#myrating -->
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="vertical-align:middle;">
+                <!--#playbutton -->
+                <span class="original_tittle"><!--#originaltitle --></span>
+                <p class="original_tittle"><span style="font-size:12pt;">
+		<!--#mpaa --> &ensp;  |
+		&ensp; <!--#duration --> &ensp; |
+		&ensp;<!--#genre --> &ensp;|
+		&ensp; <!--#date -->
+		</span>
+                </p>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <div class="cover"><img SRC="_cover_" ID="cover" width="100%"></div>
+            </td>
+            <td colspan="2" class="actors" valign="top">
+                <!--#actors -->
+            </td>
+        </tr>
+    </table>
+    <div class="text_content">
+        <p>	<!--#description --> </p>
+        <p><!--#url --> </p>
+        <p><!--#similar --> </p>
+        <p>	<!--#comments --> </p>
+        <ul>
+            <li> <span class="direct"><!--#director_lbl -->:</span> <!--#director --> </li>
+            <li> <span class="direct"><!--#scenario_lbl -->:</span> <!--#scenario --> </li>
+            <li> <span class="direct"><!--#studio_lbl -->:</span> <!--#studio --> </li>
+            <li> <span class="direct"><!--#country_lbl -->:</span> <!--#country --> </li>
+            <li> <span class="direct"><!--#personalmarks_lbl -->:</span> <!--#personalmarks --> </li>
+        </ul>
+        <ul>
+            <li> <span class="direct"><!--#resolution_lbl -->:</span> <!--#resolution --> </li>
+            <li> <span class="direct"><!--#filesize_lbl -->:</span> <!--#filesize --> </li>
+            <li> <span class="direct"><!--#quality_lbl -->:</span> <!--#quality --> </li>
+            <li> <span class="direct"><!--#subtitles_lbl -->:</span> <!--#subtitles --> </li>
+            <li> <span class="direct"><!--#mediatype_lbl -->:</span> <!--#mediatype --> </li>
+            <li> <span class="direct"><!--#medialabel_lbl -->:</span> <!--#medialabel --> </li>
+            <li> <span class="direct"><!--#medialocation_lbl -->:</span> <!--#medialocation --> </li>
+        </ul>
+        <p>	<!--#episodes --> </p>
+        <p>	<!--#userfield --> </p>
+        <div><!--#screenshots width="360" --></div>
+    </div>
+</div>
+</body>
+</html>

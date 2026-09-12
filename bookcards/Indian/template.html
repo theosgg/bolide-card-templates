@@ -1,0 +1,120 @@
+<html>
+<head>
+	<style>
+	body {
+		font-family: Tahoma, Verdana, Arial, sans-serif;
+		background-color: #B6BCD5;
+		margin: 0;
+		padding: 0.9em;
+		color: #333333;
+		font-size: 10.5pt;
+	}
+	a { color: #1869D1; text-decoration: none; }
+	a:hover { text-decoration: underline; }
+
+	table.card { width: 100%; border-collapse: collapse; background-color: #ffffff; }
+	td.leftcol {
+		width: 16.5em;
+		vertical-align: top;
+		background-color: #EEEDF4;
+		padding: 1.1em 1.0em 1.2em 1.0em;
+	}
+	td.maincol {
+		vertical-align: top;
+		background-color: #ffffff;
+		padding: 0.9em 1.4em 1.2em 1.5em;
+	}
+
+	.cover { width: 13em; margin: 0 auto 0.7em auto; text-align: center; background-color: #ffffff; padding: 0.25em; }
+	#cover { width: 100%; }
+
+	.Raiting { padding: 0.3em 0 0.3em 0; text-align: center; }
+	.Raiting a { border: none; }
+	.MediaInfo { color: #7a7a7b; padding: 0.7em 0 0.7em 0.2em; line-height: 165%; }
+	.CollectionInfo { color: #9693B0; padding: 0.7em 0 0.7em 0.2em; line-height: 165%; }
+	.Loan { color: #E9032E; padding: 0.7em 0 0.7em 0.2em; }
+	.Loan a { color: #E9032E; }
+	.MediaInfo strong, .CollectionInfo strong { color: #7E76A5; }
+
+	h1 { font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 16pt; color: #7E76A5; font-weight: normal; margin: 0 0 0.8em 0; }
+	h2 { font-size: 11pt; color: #7E76A5; font-weight: bold; margin: 0; padding: 0; }
+	table.BookInfo { width: 100%; border-collapse: separate; border-spacing: 0.1em; background-color: #cccccc; }
+	table.BookInfo td.Name {
+		width: 9.5em;
+		vertical-align: top;
+		background-color: #f7f7f7;
+		color: #777777;
+		font-weight: bold;
+		padding: 0.4em 1.0em 0.4em 1.0em;
+	}
+	table.BookInfo td { vertical-align: top; background-color: #ffffff; color: #333333; padding: 0.4em 1.0em 0.4em 1.0em; }
+
+	.Url { text-align: right; padding: 0.7em 0 0 0; }
+	.Description { padding: 1.4em 0 0 0; }
+	.Screenshots { padding: 1.2em 0 0 0; }
+	.Screenshots img { border: 0.08em solid #cccccc; }
+	.Comments { padding: 1.2em 0 0 0; }
+	.Userfields { padding: 1.2em 0 0 0; }
+	.screenshot { height: auto; }
+	ul { padding: 0; margin: 0; list-style-type: none; }
+	</style>
+</head>
+<body>
+<table class="card">
+<tr>
+<td class="leftcol">
+	<div class="cover"> <img SRC="_cover_" ID="cover" width="100%"> </div>
+	<div class="Raiting"><!--#rating --></div>
+	<div class="Raiting"><!--#myrating --></div>
+	<div class="MediaInfo">
+		<strong><!--#bindingtype_lbl -->:</strong> <!--#bindingtype --><br>
+		<strong>ISBN:</strong> <!--#ISBN --><br>
+		<strong><!--#loc_lbl -->:</strong> <!--#loc --><br>
+		<strong><!--#dewey_lbl -->:</strong> <!--#dewey --><br>
+		<strong><!--#dimensions_lbl -->:</strong> <!--#dimensions --><br>
+		<strong><!--#circulation_lbl -->:</strong> <!--#circulation --><br>
+		<strong><!--#pages_lbl -->:</strong> <!--#pages --><br>
+		<strong><!--#playtime_lbl -->:</strong> <!--#playtime --><br>
+		<strong><!--#language_lbl -->:</strong> <!--#language --><br>
+	</div>
+	<div class="CollectionInfo">
+		<strong><!--#booknum_lbl -->:</strong> <!--#booknum --><br>
+		<strong><!--#date_lbl -->:</strong> <!--#date --><br>
+		<strong><!--#location_lbl -->:</strong> <!--#location --><br>
+		<strong><!--#personalmarks_lbl -->:</strong> <!--#personalmarks --><br>
+		<strong><!--#wishlist_lbl -->:</strong> <!--#wishlist --><br>
+		<strong><!--#unread_lbl -->:</strong> <!--#unread --><br>
+		<strong><!--#dateread_lbl -->:</strong> <!--#dateread --><br>
+		<strong><!--#price_lbl -->:</strong> <!--#price --><br>
+		<strong><!--#filesize_lbl -->:</strong> <!--#filesize --><br>
+	</div>
+	<div class="Loan">
+		<strong><!--#loan_lbl -->:</strong> <!--#loan -->
+	</div>
+</td>
+<td class="maincol">
+<h1><!--#title --></h1>
+<table class="BookInfo">
+<tr>	<td class="Name"><!--#originaltitle_lbl -->:</td>	<td><h2><!--#originaltitle --></h2></td> </tr>
+<tr>	<td class="Name"><!--#serie_lbl -->:</td>	<td><!--#serie --></td> </tr>
+<tr>	<td class="Name"><!--#volume_lbl -->:</td>	<td><!--#volume --></td> </tr>
+<tr>	<td class="Name"><!--#year_lbl -->:</td>	<td><!--#year --></td> </tr>
+<tr>	<td class="Name"><!--#subject_lbl -->:</td>	<td><!--#subject --></td> </tr>
+<tr>	<td class="Name"><!--#authors_lbl -->:</td>	<td><!--#authors --></td> </tr>
+<tr>	<td class="Name"><!--#editors_lbl -->:</td>	<td><!--#editors --></td> </tr>
+<tr>	<td class="Name"><!--#translators_lbl -->:</td>	<td><!--#translators --></td> </tr>
+<tr>	<td class="Name"><!--#illustrators_lbl -->:</td>	<td><!--#illustrators --></td> </tr>
+<tr>	<td class="Name"><!--#publisher_lbl -->:</td>	<td><!--#publisher --></td> </tr>
+</table>
+<div class="Url"><!--#url --></div>
+<div class="Description"><!--#synopsis --></div>
+<div class="Screenshots"><!--#screenshots width="100" --></div>
+<div class="Comments"><strong><!--#comments_lbl -->:</strong> <!--#comments --></div>
+<div class="Comments"><strong><!--#contents_lbl -->:</strong><br><!--#contents --></div>
+<div class="Userfields"><!--#userfield --></div>
+<div class="Comments" align="center"><!--#playbutton --></div>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿<html>
+<head>
+<style TYPE="text/css">
+	body {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		background-color: #5b7596;
+		background-image: url(img/head.jpg);
+		background-repeat: repeat-x;
+		color: #ffffff;
+		font-size: 10pt;
+		margin: 0;
+		padding: 0.9em;
+	}
+	a         { text-decoration: none; color: #ffffff; }
+	a:visited { text-decoration: none; color: #ffcc00; }
+	a:hover   { text-decoration: underline; color: #ffcc00; }
+
+	/* ---- панель с объёмной рамкой: были ячейки bordercolor1..11 ---- */
+	.panel {
+		box-sizing: border-box;
+		background-color: #225080;
+		border: 0.18em outset #668fb9;
+		padding: 0.5em 0.8em;
+		margin-bottom: 0.8em;
+	}
+	.titlebar { text-align: center; }
+	.titlebar .num { font-size: 12pt; font-weight: bold; }
+	h1 { font-size: 12pt; font-weight: bold; margin: 0; display: inline; }
+	.origtitle { font-size: 10.5pt; margin-top: 0.2em; }
+
+	.statusrow { text-align: center; font-size: 10pt; font-weight: bold; padding: 0.2em 0 0.6em 0; }
+	.statusrow a { border: none; }
+
+	table.card { width: 100%; border-collapse: collapse; }
+	td.leftcol { width: 18em; vertical-align: top; padding-right: 1em; }
+	td.maincol { vertical-align: top; }
+
+	/* ---- cover: контейнер в em, картинка тянется на 100% ---- */
+	.cover { width: 15.5em; margin: 0 auto; text-align: center; }
+	#cover { width: 100%; }
+
+	.side { font-size: 9.5pt; line-height: 170%; }
+	.side b { color: #cfe0f2; }
+
+	/* ---- таблицы фактов внутри панелей ---- */
+	table.props { border-collapse: collapse; }
+	table.props td { font-size: 9.5pt; vertical-align: top; padding: 0.15em 0.6em 0.15em 0; }
+	table.props td.lbl { width: 8.5em; color: #cfe0f2; }
+	.just { text-align: justify; font-size: 9.5pt; }
+	.icons img { vertical-align: middle; }
+	.screenshot { height: auto; }
+</style>
+</head>
+<body>
+
+<div class="panel titlebar">
+	<span class="num"><!--#movienum -->.</span>
+	<h1><!--#title --></h1>
+	<div class="origtitle"><!--#originaltitle --></div>
+</div>
+
+<div class="statusrow">
+	<!--#rating -->
+	&nbsp; <!--#date --> &nbsp;
+	<!--#url -->
+</div>
+
+<table class="card">
+<tr>
+<td class="leftcol">
+	<div class="panel">
+		<div class="cover"><img src="_cover_" id="cover" width="100%" border="0"></div>
+	</div>
+	<div class="panel side">
+		<b><!--#date_lbl -->:</b> <!--#date --><br>
+		<b><!--#mediatype_lbl -->:</b> <!--#mediatype -->
+		(<!--#mediacount -->)<br>
+		<b><!--#medialabel_lbl -->:</b> <!--#medialabel --><br>
+		<b><!--#medialocation_lbl -->:</b> <!--#medialocation --><br>
+		<div class="icons"><img border="0" src="img/Seen.gif" width="16" height="16"> <!--#seen --></div>
+		<div class="icons"><img border="0" src="img/wish3.gif" width="16" height="16"> <!--#wishlist --></div>
+		<div class="icons"><img border="0" src="img/Loan2.gif" width="16" height="16"> <!--#loan --></div>
+		<div align="center"><!--#playbutton --></div>
+		<div align="center"><!--#myrating --></div>
+	</div>
+</td>
+<td class="maincol">
+	<div class="panel">
+		<table class="props">
+		<tr><td class="lbl"><!--#year_lbl --></td><td><!--#year --></td></tr>
+		<tr><td class="lbl"><!--#country_lbl --></td><td><!--#country --></td></tr>
+		<tr><td class="lbl"><!--#genre_lbl --></td><td><!--#genre --></td></tr>
+		<tr><td class="lbl"><!--#studio_lbl --></td><td><!--#studio --></td></tr>
+		<tr><td class="lbl"><!--#director_lbl --></td><td><!--#director --></td></tr>
+		<tr><td class="lbl"><!--#scenario_lbl --></td><td><!--#scenario --></td></tr>
+		<tr><td class="lbl"><!--#personalmarks_lbl --></td><td><!--#personalmarks --></td></tr>
+		</table>
+	</div>
+
+	<div class="panel"><table class="props"><tr><td class="lbl"><!--#actors_lbl --></td><td class="just"><!--#actors --></td></tr></table></div>
+
+	<div class="panel">
+		<table class="props">
+		<tr><td class="lbl"><!--#duration_lbl --></td><td><!--#duration --></td></tr>
+		<tr><td class="lbl"><!--#resolution_lbl --></td><td><!--#resolution --></td></tr>
+		<tr><td class="lbl"><!--#aspectratio_lbl --></td><td><!--#aspectratio --></td></tr>
+		<tr><td class="lbl"><!--#vidcodec_lbl --></td><td><!--#vidcodec --> (<!--#vidbitrate -->)</td></tr>
+		<tr><td class="lbl"><!--#audcodec_lbl --></td><td><!--#audcodec --> (<!--#audbitrate -->)</td></tr>
+		<tr><td class="lbl"><!--#subtitles_lbl --></td><td><!--#subtitles --></td></tr>
+		<tr><td class="lbl"><!--#filesize_lbl --></td><td><!--#filesize --></td></tr>
+		<tr><td class="lbl">MPAA</td><td><!--#mpaa --></td></tr>
+		<tr><td class="lbl"><!--#barcode_lbl --></td><td><!--#barcode --></td></tr>
+		</table>
+	</div>
+
+	<!-- панель и её содержимое на ОДНОЙ строке: CropEmptyFields удаляет строку
+	     целиком, и пустое поле не оставляет пустую синюю рамку -->
+	<div class="panel"><table class="props"><tr><td class="lbl"><!--#description_lbl --></td><td class="just"><!--#description --></td></tr></table></div>
+	<div><!--#screenshots width="150" --></div>
+	<div class="panel"><table class="props"><tr><td class="lbl"><!--#comments_lbl --></td><td class="just"><!--#comments --></td></tr></table></div>
+	<div class="panel"><table class="props"><tr><td class="lbl"><!--#episodes_lbl --></td><td><!--#episodes --></td></tr></table></div>
+	<div class="side"><!--#userfield --></div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

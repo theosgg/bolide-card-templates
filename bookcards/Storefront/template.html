@@ -1,0 +1,124 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Book Card</title>
+<style type="text/css">
+body {
+	font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+	color: #0f1111;
+	font-size: 11pt;
+	line-height: 150%;
+	margin: 0;
+	padding: 1.2em;
+}
+a       { color: #007185; text-decoration: none; }
+a:hover { color: #c7511f; text-decoration: underline; }
+
+table.card { width: 100%; border-collapse: collapse; }
+td.covercol { vertical-align: top; padding-right: 1.6em; }
+td.maincol  { vertical-align: top; padding-right: 1.6em; }
+td.buycol   { vertical-align: top; }
+
+.cover { width: 15em; text-align: center; }
+#cover { width: 100%; }
+.thumbs { padding-top: 0.8em; text-align: center; }
+
+h1 { font-size: 20pt; font-weight: normal; color: #0f1111; margin: 0 0 0.15em 0; line-height: 128%; }
+.byline { font-size: 12pt; margin-bottom: 0.3em; }
+.subtitle { font-size: 11pt; color: #565959; margin-bottom: 0.3em; }
+.rate { padding: 0.2em 0; }
+.rate a { border: none; }
+
+.rule { border-top: 0.08em solid #e7e7e7; margin-top: 1em; padding-top: 0.7em; }
+h2 { font-size: 13pt; font-weight: bold; color: #0f1111; margin: 0 0 0.4em 0; }
+.body { font-size: 11pt; line-height: 165%; }
+
+table.specs { width: 100%; border-collapse: collapse; }
+table.specs td { vertical-align: top; padding: 0.2em 0.6em 0.2em 0; font-size: 10.5pt; }
+td.lbl { white-space: nowrap; font-weight: bold; color: #0f1111; }
+td.val { color: #0f1111; }
+
+.buybox {
+	border: 0.08em solid #d5d9d9;
+	background-color: #ffffff;
+	padding: 1em;
+}
+.price { font-size: 18pt; color: #b12704; margin-bottom: 0.4em; }
+.instock { color: #007600; font-size: 12pt; margin-bottom: 0.5em; }
+.onloan  { color: #b12704; font-size: 12pt; margin-bottom: 0.5em; }
+.playbtn {
+	background-color: #ffd814;
+	border: 0.08em solid #fcd200;
+	text-align: center;
+	padding: 0.5em;
+	margin: 0.6em 0;
+}
+.buybox .row { font-size: 10pt; padding: 0.15em 0; }
+.buybox .k { color: #565959; }
+.screenshot { height: auto; }
+</style>
+</head>
+<body>
+
+<table class="card">
+<tr>
+<td class="covercol" width="30%">
+	<div class="cover"><img SRC="_cover_" ID="cover" width="100%" alt=""></div>
+	<div class="thumbs"><!--#screenshots width="90" --></div>
+</td>
+
+<td class="maincol" width="40%">
+	<h1><!--#title --></h1>
+	<div class="byline"><!--#authors_lbl -->: <!--#authors --></div>
+	<div class="subtitle"><!--#originaltitle --></div>
+	<div class="subtitle"><!--#serie --> <!--#volume --></div>
+	<div class="rate"><!--#rating --> <!--#myrating --></div>
+	<div class="subtitle"><!--#bindingtype --> &nbsp;|&nbsp; <!--#pages_lbl -->: <!--#pages --></div>
+
+	<div class="rule"><h2><!--#synopsis_lbl --></h2><div class="body"><!--#synopsis --></div></div>
+	<div class="rule"><h2><!--#contents_lbl --></h2><div class="body"><!--#contents --></div></div>
+	<div class="rule"><h2><!--#comments_lbl --></h2><div class="body"><!--#comments --></div></div>
+
+	<div class="rule">
+	<table class="specs">
+		<tr><td class="lbl"><!--#publisher_lbl --></td><td class="val"><!--#publisheryear --></td></tr>
+		<tr><td class="lbl"><!--#language_lbl --></td><td class="val"><!--#language --></td></tr>
+		<tr><td class="lbl"><!--#bindingtype_lbl --></td><td class="val"><!--#bindingtype --></td></tr>
+		<tr><td class="lbl"><!--#pages_lbl --></td><td class="val"><!--#pages --></td></tr>
+		<tr><td class="lbl">ISBN</td><td class="val"><!--#ISBN --></td></tr>
+		<tr><td class="lbl"><!--#dimensions_lbl --></td><td class="val"><!--#dimensions --></td></tr>
+		<tr><td class="lbl"><!--#circulation_lbl --></td><td class="val"><!--#circulation --></td></tr>
+		<tr><td class="lbl"><!--#subject_lbl --></td><td class="val"><!--#subject --></td></tr>
+		<tr><td class="lbl"><!--#editors_lbl --></td><td class="val"><!--#editors --></td></tr>
+		<tr><td class="lbl"><!--#translators_lbl --></td><td class="val"><!--#translators --></td></tr>
+		<tr><td class="lbl"><!--#illustrators_lbl --></td><td class="val"><!--#illustrators --></td></tr>
+		<tr><td class="lbl"><!--#loc_lbl --></td><td class="val"><!--#loc --></td></tr>
+		<tr><td class="lbl"><!--#dewey_lbl --></td><td class="val"><!--#dewey --></td></tr>
+		<tr><td class="lbl"><!--#playtime_lbl --></td><td class="val"><!--#playtime --></td></tr>
+		<tr><td class="lbl"><!--#filesize_lbl --></td><td class="val"><!--#filesize --></td></tr>
+		<tr><td colspan="2"><!--#userfield --></td></tr>
+	</table>
+	</div>
+</td>
+
+<td class="buycol" width="30%">
+	<div class="buybox">
+		<div class="price"><!--#price --></div>
+		<div class="instock"><!--#location_lbl -->: <!--#location --></div>
+		<div class="onloan"><!--#loan_lbl -->: <!--#loan --></div>
+		<div class="playbtn"><!--#playbutton --></div>
+		<div class="row"><span class="k"><!--#booknum_lbl -->:</span> <!--#booknum --></div>
+		<div class="row"><span class="k"><!--#wishlist_lbl -->:</span> <!--#wishlist --></div>
+		<div class="row"><span class="k"><!--#unread_lbl -->:</span> <!--#unread --></div>
+		<div class="row"><span class="k"><!--#dateread_lbl -->:</span> <!--#dateread --></div>
+		<div class="row"><span class="k"><!--#date_lbl -->:</span> <!--#date --></div>
+		<div class="row"><span class="k"><!--#personalmarks_lbl -->:</span> <!--#personalmarks --></div>
+		<div class="row"><!--#url --></div>
+	</div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

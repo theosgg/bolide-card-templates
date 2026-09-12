@@ -1,0 +1,116 @@
+﻿<html>
+<head>
+<meta charset="utf-8">
+<title>Movie Card</title>
+<style type="text/css">
+body {
+	font-family: 'Courier New', Courier, monospace;
+	background-color: #fbfaf6;
+	color: #1c1c1c;
+	font-size: 11pt;
+	line-height: 165%;
+	margin: 0;
+	padding: 2em 3em;
+}
+a       { color: #1c1c1c; text-decoration: underline; }
+a:hover { color: #8a1010; text-decoration: underline; }
+b, strong { font-weight: bold; }
+
+.titlepage { text-align: center; margin-bottom: 2em; }
+.tnum { font-size: 10pt; color: #777777; }
+h1 {
+	font-size: 16pt;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: underline;
+	margin: 0.3em 0 0.2em 0;
+	line-height: 140%;
+}
+.orig { font-size: 11pt; color: #555555; }
+.writtenby { margin-top: 1.2em; font-size: 11pt; }
+.writtenby .by { color: #777777; }
+.rate { margin-top: 0.8em; }
+.rate a { border: none; text-decoration: none; }
+
+table.sheet { width: 100%; border-collapse: collapse; }
+td.covercol { width: 15em; vertical-align: top; padding-right: 2em; }
+td.factcol  { vertical-align: top; }
+
+.cover { width: 13.5em; margin: 0 auto; text-align: center; }
+#cover { width: 100%; border: 0.08em solid #b9b5a9; padding: 0.3em; background-color: #ffffff; }
+.under { text-align: center; padding-top: 0.6em; }
+.under a { border: none; }
+
+.fact { padding: 0.1em 0; }
+.fact .k { text-transform: uppercase; font-weight: bold; font-size: 9.5pt; color: #555555; }
+
+.scene {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 11pt;
+	border-bottom: 0.08em solid #1c1c1c;
+	margin: 1.8em 0 0.6em 0;
+	padding-bottom: 0.15em;
+}
+.action { text-align: justify; }
+.screenshot { height: auto; }
+</style>
+</head>
+<body>
+
+<div class="titlepage">
+	<div class="tnum">No. <!--#movienum --></div>
+	<h1><!--#title --></h1>
+	<div class="orig">(<!--#originaltitle -->)</div>
+	<div class="writtenby"><span class="by">written by</span><br><b><!--#scenario --></b></div>
+	<div class="writtenby"><span class="by">directed by</span><br><b><!--#director --></b></div>
+	<div class="rate"><!--#rating --></div>
+	<div class="rate"><!--#myrating --></div>
+</div>
+
+<table class="sheet">
+<tr>
+<td class="covercol">
+	<div class="cover"><img SRC="_cover_" ID="cover" width="100%" alt=""></div>
+	<div class="under"><!--#playbutton --></div>
+</td>
+<td class="factcol">
+	<div class="fact"><span class="k"><!--#year_lbl -->:</span> <!--#year --></div>
+	<div class="fact"><span class="k"><!--#genre_lbl -->:</span> <!--#genre --></div>
+	<div class="fact"><span class="k"><!--#country_lbl -->:</span> <!--#country --></div>
+	<div class="fact"><span class="k"><!--#studio_lbl -->:</span> <!--#studio --></div>
+	<div class="fact"><span class="k">MPAA:</span> <!--#mpaa --></div>
+	<div class="fact"><span class="k"><!--#duration_lbl -->:</span> <!--#duration --></div>
+	<div class="fact"><span class="k"><!--#mediatype_lbl -->:</span> <!--#mediatype -->
+(<!--#mediacount -->)
+</div>
+	<div class="fact"><span class="k"><!--#medialabel_lbl -->:</span> <!--#medialabel --></div>
+	<div class="fact"><span class="k"><!--#medialocation_lbl -->:</span> <!--#medialocation --></div>
+	<div class="fact"><span class="k"><!--#filesize_lbl -->:</span> <!--#filesize --></div>
+	<div class="fact"><span class="k"><!--#resolution_lbl -->:</span> <!--#resolution --></div>
+	<div class="fact"><span class="k"><!--#quality_lbl -->:</span> <!--#quality --></div>
+	<div class="fact"><span class="k"><!--#aspectratio_lbl -->:</span> <!--#aspectratio --></div>
+	<div class="fact"><span class="k"><!--#subtitles_lbl -->:</span> <!--#subtitles --></div>
+	<div class="fact"><span class="k"><!--#barcode_lbl -->:</span> <!--#barcode --></div>
+	<div class="fact"><span class="k"><!--#price_lbl -->:</span> <!--#price --></div>
+	<div class="fact"><span class="k"><!--#loan_lbl -->:</span> <!--#loan --></div>
+	<div class="fact"><span class="k"><!--#wishlist_lbl -->:</span> <!--#wishlist --></div>
+	<div class="fact"><span class="k"><!--#seen_lbl -->:</span> <!--#seen --></div>
+	<div class="fact"><span class="k"><!--#personalmarks_lbl -->:</span> <!--#personalmarks --></div>
+	<div class="fact"><span class="k"><!--#date_lbl -->:</span> <!--#date --></div>
+	<div class="fact"><span class="k"><!--#trailer_lbl -->:</span> <!--#trailer --></div>
+	<div class="fact"><!--#url --></div>
+	<div class="fact"><!--#similar --></div>
+</td>
+</tr>
+</table>
+
+<div><div class="scene"><!--#actors_lbl --></div><div class="action"><!--#actors --></div></div>
+<div><div class="scene"><!--#description_lbl --></div><div class="action"><!--#description --></div></div>
+<div><div class="scene"><!--#comments_lbl --></div><div class="action"><!--#comments --></div></div>
+<div><div class="scene"><!--#episodes_lbl --></div><div class="action"><!--#episodes --></div></div>
+<div><!--#userfield --></div>
+<div style="margin-top:1.4em;"><!--#screenshots width="240" --></div>
+
+</body>
+</html>

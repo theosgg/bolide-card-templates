@@ -1,0 +1,113 @@
+<HTML>
+<head>
+<style type="text/css">
+
+	body, h1, h2, h3 {
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	a:link { color: #333333; text-decoration: underline; }
+	body {
+		font-family: Helvetica, Arial, 'Segoe UI', sans-serif;
+		background-color: #fffcf5;
+		font-size: 11pt;
+		color: #333333;
+	}
+	.header {
+		background-color: #fab232;
+		border-bottom: 0.1em solid #e09a1a;
+		padding: 0.4em 0 0.5em 1.4em;
+	}
+	.subheader {
+		font-size: 10pt;
+		color: #666666;
+		background-color: #fce4ba;
+		border-bottom: 0.08em solid #f8bc4e;
+		padding: 0.3em 0 0.3em 1.4em;
+	}
+	h1 { font-size: 17pt; }
+
+	.bookImg { width: 25%; text-align: center; vertical-align: top; padding-top: 0.5em; }
+	.bookImg img { width: 90%; padding: 0.15em; margin: 0.15em; border: 0.08em solid #999999; }
+
+	.bookAbout { width: 75%; vertical-align: top; padding: 0.4em 0.8em 0.8em 0.8em; }
+	.bookAbout table { width: 100%; border-collapse: collapse; }
+	.bookAbout table td { background-color: #fff9ec; padding: 0.25em 0.5em; vertical-align: top; }
+	.bookAbout td.title { width: 30%; font-size: 10pt; font-weight: bold; }
+	.bookAbout td.text  { font-size: 11pt; color: #333333; }
+	.description .text { font-size: 11pt; }
+	.comm div { font-size: 10pt; color: #666666; }
+	.rate a { border: none; text-decoration: none; }
+	h2 { font-size: 13pt; margin-top: 0.8em; }
+	h3 { font-size: 11pt; margin-top: 0.8em; }
+	.screenshot { height: auto; }
+
+</style>
+</head>
+<body>
+
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2" class="header">
+			<h1><!--#title --></h1>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="subheader">
+			<!--#loan_lbl --> | <!--#loan --> |
+			<!--#bindingtype --> |
+			<!--#location --> |
+			<!--#date -->
+		</td>
+	</tr>
+	<tr>
+		<td class="bookImg">
+			<b>#<!--#booknum --></b>
+			<img SRC="_cover_" ID="cover">
+		</td>
+		<td class="bookAbout">
+			<table>
+				<tr><td class="title"><!--#originaltitle_lbl --></td><td class="text"><!--#originaltitle --></td></tr>
+				<tr><td class="title"><!--#authors_lbl --></td><td class="text"><!--#authors --></td></tr>
+				<tr><td class="title"><!--#year_lbl --></td><td class="text"><!--#year --></td></tr>
+				<tr><td class="title"><!--#publisher_lbl --></td><td class="text"><!--#publisher --></td></tr>
+				<tr><td class="title"><!--#subject_lbl --></td><td class="text"><!--#subject --></td></tr>
+				<tr><td class="title"><!--#rating_lbl --></td><td class="text rate"><!--#rating --></td></tr>
+				<tr><td class="title"><!--#myrating_lbl --></td><td class="text rate"><!--#myrating --></td></tr>
+				<tr><td class="title"><!--#pages_lbl --></td><td class="text"><!--#pages --></td></tr>
+				<tr><td class="title"><!--#playtime_lbl --></td><td class="text"><!--#playtime --></td></tr>
+				<tr><td class="title"><!--#wishlist_lbl --></td><td class="text"><!--#wishlist --></td></tr>
+				<tr><td class="title"><!--#unread_lbl --></td><td class="text"><!--#unread --></td></tr>
+				<tr><td class="title"><!--#dateread_lbl --></td><td class="text"><!--#dateread --></td></tr>
+				<tr><td colspan="2"><!--#url --></td></tr>
+				<tr><td colspan="2"><!--#userfield --></td></tr>
+			</table>
+			<div class="description">
+				<div><h2><!--#synopsis_lbl --></h2><div class="text"><!--#synopsis --></div></div>
+				<div><!--#screenshots width="40%" --></div>
+				<div class="comm"><h3><!--#comments_lbl --></h3><div><!--#comments --></div></div>
+				<div class="comm"><h3><!--#contents_lbl --></h3><div><!--#contents --></div></div>
+			</div>
+
+			<table>
+				<tr><td class="title"><!--#personalmarks_lbl --></td><td class="text"><!--#personalmarks --></td></tr>
+				<tr><td class="title">ISBN</td><td class="text"><!--#ISBN --></td></tr>
+				<tr><td class="title"><!--#serie_lbl --></td><td class="text"><!--#serie --></td></tr>
+				<tr><td class="title"><!--#volume_lbl --></td><td class="text"><!--#volume --></td></tr>
+				<tr><td class="title"><!--#translators_lbl --></td><td class="text"><!--#translators --></td></tr>
+				<tr><td class="title"><!--#illustrators_lbl --></td><td class="text"><!--#illustrators --></td></tr>
+				<tr><td class="title"><!--#editors_lbl --></td><td class="text"><!--#editors --></td></tr>
+				<tr><td class="title"><!--#dimensions_lbl --></td><td class="text"><!--#dimensions --></td></tr>
+				<tr><td class="title"><!--#circulation_lbl --></td><td class="text"><!--#circulation --></td></tr>
+				<tr><td class="title"><!--#language_lbl --></td><td class="text"><!--#language --></td></tr>
+				<tr><td class="title"><!--#price_lbl --></td><td class="text"><!--#price --></td></tr>
+				<tr><td class="title"><!--#filesize_lbl --></td><td class="text"><!--#filesize --></td></tr>
+				<tr><td colspan="2" align="center"><!--#playbutton --></td></tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+</body>
+</HTML>

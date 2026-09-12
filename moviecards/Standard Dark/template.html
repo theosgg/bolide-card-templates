@@ -1,0 +1,119 @@
+﻿<html>
+<head>
+	<style>
+	body {
+		font-family: Tahoma, 'Segoe UI', Helvetica, Arial, sans-serif;
+		background-color: #121f35;          /* фон окна в тёмной теме */
+		margin: 0;
+		color: #e4e9f2;
+		font-size: 11pt;
+	}
+	a { color: #e4e9f2; text-decoration: none; }
+	a:hover { color: #8c90ff; text-decoration: underline; }
+
+	table.card { width: 100%; border-collapse: collapse; }
+	td.leftcol {
+		width: 17em;
+		vertical-align: top;
+		background-color: #0e192b;
+		border-left: 0.55em solid #16253d;
+		border-right: 0.55em solid #16253d;
+		padding: 1.4em 1.2em 1.4em 1.2em;
+	}
+	td.maincol {
+		vertical-align: top;
+		background-color: #121f35;
+		border-left: 0.18em solid #22314d;
+		padding: 0.8em 1.5em 1.2em 1.6em;
+	}
+
+	.cover { width: 13.5em; margin: 0 auto 0.8em auto; text-align: center; }
+	#cover { width: 100%; border: 0.14em solid #2a3a57; }
+
+	.stars  { text-align: center; margin-bottom: 0.3em; }
+	.hearts { text-align: center; margin-bottom: 0.5em; }
+	.stars a, .hearts a, .short_info a { border: none; }
+
+	.short_info { font-size: 10pt; line-height: 165%; text-align: left; color: #b6c0d6; }
+	.short_info b { color: #ffffff; font-weight: bold; }
+	.short_info .playrow { margin: 0.5em 0; text-align: center; }
+	.loan { color: #ff7b7b; }
+	.loan a { color: #ff7b7b; }
+
+	.title { text-transform: uppercase; font-size: 19pt; font-weight: bold; color: #ffffff; margin: 0.3em 0 0.15em 0; }
+	.original_title { font-size: 11pt; color: #8fa0bc; margin: 0 0 0.9em 0; }
+
+	table.gioupi { border-collapse: collapse; margin-top: 0.5em; }
+	td.fld {
+		text-transform: uppercase;
+		font-size: 9.5pt;
+		font-weight: bold;
+		color: #8790d6;
+		text-align: right;
+		vertical-align: top;
+		width: 11em;
+		padding: 0.25em 0.7em 0.25em 0;
+	}
+	td.val { font-size: 11pt; vertical-align: top; padding: 0.25em 0; color: #e4e9f2; }
+	td.actors { min-width: 20em; max-width: 34em; }
+
+	.episodes { margin-top: 1em; }
+	.screenshot { height: 13.5em; }
+	</style>
+</head>
+<body>
+<table class="card">
+<tr>
+<td class="leftcol">
+	<div class="cover"> <img SRC="_cover_" ID="cover" width="100%"> </div>
+	<div class="stars"><!--#rating --></div>
+	<div class="short_info">
+		<div class="hearts"><!--#myrating --></div>
+		<div> <!--#similar --> </div>
+		<!--#mediatype_lbl -->: <b><!--#mediatype --> </b>
+		<br> <!--#duration_lbl -->: <b><!--#duration --> </b>
+		<br> <!--#medialabel_lbl -->: <b><!--#medialabel --> </b>
+		<br> <!--#medialocation_lbl -->: <b><!--#medialocation --> </b>
+		<br> <!--#filesize_lbl -->: <b><!--#filesize --> </b>
+		<br> <!--#subtitles_lbl -->: <b><!--#subtitles --> </b>
+		<br> <!--#quality_lbl -->: <b><!--#quality --> </b>
+		<br> <!--#resolution_lbl -->: <b><!--#resolution --> </b>
+		<br> <!--#aspectratio_lbl -->: <b><!--#aspectratio --> </b>
+		<div class="playrow"> <!--#playbutton --></div>
+		<div class="loan"><!--#loan_lbl -->: <b><!--#loan --></b></div>
+		<!--#wishlist_lbl -->: <label class="checkbox"><!--#wishlist --></label>
+		<br><!--#seen_lbl -->: <!--#seen -->
+		<br><!--#personalmarks_lbl -->: <!--#personalmarks -->
+		<br>
+		<br> <!--#date_lbl -->: <b><!--#date --> </b>
+		<br><!--#url -->
+	</div>
+</td>
+<td class="maincol">
+<div class="title">
+<!--#movienum -->.&nbsp;
+<!--#title -->
+</div>
+<div class="original_title">(<!--#originaltitle_lbl -->: <!--#originaltitle -->)</div>
+<table class="gioupi">
+<tr>	<td class="fld"> <!--#year_lbl -->:</td>			<td class="val"> <!--#year --> </td> </tr>
+<tr>	<td class="fld"> <!--#genre_lbl -->:</td>			<td class="val"> <!--#genre --> </td> </tr>
+<tr>	<td class="fld"> <!--#director_lbl -->:</td>		<td class="val"> <!--#director --> </td> </tr>
+<tr>	<td class="fld"> <!--#scenario_lbl -->:</td>		<td class="val"> <!--#scenario --> </td> </tr>
+<tr>	<td class="fld"> <!--#actors_lbl -->:</td>			<td class="val actors"> <!--#actors --></td> </tr>
+<tr> 	<td class="fld"> <!--#country_lbl -->:</td>		<td class="val"> <!--#country --> </td>	</tr>
+<tr>	<td class="fld"> <!--#studio_lbl -->:</td>			<td class="val"> <!--#studio --> </td> </tr>
+<tr>	<td class="fld"> <!--#barcode_lbl -->:</td>		<td class="val"> <!--#barcode --> </td> </tr>
+<tr>	<td class="fld">  MPAA:</td>						<td class="val"> <!--#mpaa --> </td> </tr>
+<tr>	<td class="fld"> <!--#description_lbl -->:</td>	<td class="val"> <!--#description --> </td> </tr>
+<tr>	<td class="fld"> <!--#comments_lbl -->:</td>		<td class="val"> <!--#comments --> </td> </tr>
+</table>
+<div><!--#trailer_lbl -->: <!--#trailer --></div>
+<div><!--#userfield --></div>
+<div class="episodes"><!--#episodes --></div>
+<!--#screenshots -->
+</td>
+</tr>
+</table>
+</body>
+</html>

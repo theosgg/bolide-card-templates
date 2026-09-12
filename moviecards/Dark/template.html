@@ -1,0 +1,122 @@
+﻿<html>
+<head>
+	<style>
+	body {
+		font-family: 'Segoe UI', Tahoma, Helvetica, Arial, sans-serif;
+		background-color: #1a1a1a;
+		background-image: url('images/gradient.jpg');
+		margin: 0;
+		padding: 1.1em;
+		color: #ffffff;
+		font-size: 11pt;
+	}
+	a { color: #ffffff; text-decoration: none; border-bottom: 0.08em solid #666666; }
+	a:hover { color: #cccccc; }
+
+	/* ---- overall 2-column card as a table (scales with font/DPI) ---- */
+	table.card { width: 100%; border-collapse: collapse; }
+	td.leftcol {
+		width: 17em;
+		vertical-align: top;
+		background-color: #101010;           /* было images/col_full.png */
+		border: 0.08em solid #2e2e2e;
+		padding: 1.4em 1.2em 1.4em 1.2em;
+	}
+	td.maincol {
+		vertical-align: top;
+		padding: 0.8em 1.5em 1.2em 1.6em;
+	}
+
+	/* ---- cover: container in em, image fills it (width:100% scales) ---- */
+	.cover { width: 13.5em; margin: 0 auto 0.8em auto; text-align: center; }
+	#cover { width: 100%; border: 0.14em solid #ffffff; }
+
+	.stars  { text-align: center; margin-bottom: 0.3em; }
+	.hearts { text-align: center; margin-bottom: 0.5em; }
+	.stars a, .hearts a, .short_info a { border: none; }
+
+	.short_info { font-size: 10pt; line-height: 165%; text-align: left; color: #d9d9d9; }
+	.short_info b { color: #ffffff; font-weight: bold; }
+	.short_info .playrow { margin: 0.5em 0; text-align: center; }
+	.loan { color: #ff6b6b; }
+	.loan a { color: #ff6b6b; }
+
+	/* ---- main column ---- */
+	.title { text-transform: uppercase; font-size: 19pt; font-weight: bold; color: #ffffff; margin: 0.3em 0 0.15em 0; }
+	.original_title { font-size: 11pt; color: #9d9d9d; margin: 0 0 0.9em 0; }
+
+	table.gioupi { border-collapse: collapse; margin-top: 0.5em; }
+	td.fld {
+		text-transform: uppercase;
+		font-size: 9.5pt;
+		font-weight: bold;
+		color: #8f8f8f;
+		text-align: right;
+		vertical-align: top;
+		width: 11em;
+		padding: 0.25em 0.7em 0.25em 0;
+	}
+	td.val { font-size: 11pt; vertical-align: top; padding: 0.25em 0; color: #e6e6e6; }
+	td.actors { min-width: 20em; max-width: 34em; }
+	.actors_table td { padding: 0 1.4em 0.1em 0; }
+
+	.screenshot { height: 13.5em; }
+	</style>
+</head>
+<body>
+<table class="card">
+<tr>
+<td class="leftcol">
+	<div class="cover"> <img SRC="_cover_" ID="cover" width="100%"> </div>
+	<div class="stars"><!--#rating --></div>
+	<div class="short_info">
+		<div class="hearts"><!--#myrating --></div>
+		<div> <!--#similar --> </div>
+		<!--#mediatype_lbl -->: <b><!--#mediatype --> </b>
+		<br> <!--#duration_lbl -->: <b><!--#duration --> </b>
+		<br> <!--#medialabel_lbl -->: <b><!--#medialabel --> </b>
+		<br> <!--#quality_lbl -->: <b><!--#quality --> </b>
+		<br> <!--#medialocation_lbl -->: <b><!--#medialocation --> </b>
+		<br> <!--#filesize_lbl -->: <b><!--#filesize --> </b>
+		<br> <!--#subtitles_lbl -->: <b><!--#subtitles --> </b>
+		<br> <!--#resolution_lbl -->: <b><!--#resolution --> </b>
+		<br> <!--#aspectratio_lbl -->: <b><!--#aspectratio --> </b>
+		<div class="playrow"> <!--#playbutton --></div>
+		<div class="loan"><!--#loan_lbl -->: <b><!--#loan --></b></div>
+		<!--#wishlist_lbl -->: <label class="checkbox"><!--#wishlist --></label>
+		<br><!--#seen_lbl -->: <!--#seen -->
+		<br><!--#personalmarks_lbl -->: <!--#personalmarks -->
+		<br>
+		<br> <!--#date_lbl -->: <b><!--#date --> </b>
+		<br><!--#url -->
+	</div>
+</td>
+<td class="maincol">
+<div class="title">
+<!--#movienum -->.&nbsp;
+<!--#title -->
+</div>
+<div class="original_title">(<!--#originaltitle_lbl -->: <!--#originaltitle -->)</div>
+<table class="gioupi">
+<tr>	<td class="fld"> <!--#year_lbl -->:</td>			<td class="val"> <!--#year --> </td> </tr>
+<tr>	<td class="fld"> <!--#genre_lbl -->:</td>			<td class="val"> <!--#genre --> </td> </tr>
+<tr>	<td class="fld"> <!--#director_lbl -->:</td>		<td class="val"> <!--#director --> </td> </tr>
+<tr>	<td class="fld"> <!--#scenario_lbl -->:</td>		<td class="val"> <!--#scenario --> </td> </tr>
+<tr>	<td class="fld"> <!--#actors_lbl -->:</td>			<td class="val actors"> <!--#actors --></td> </tr>
+<tr> 	<td class="fld"> <!--#country_lbl -->:</td>		<td class="val"> <!--#country --> </td>	</tr>
+<tr>	<td class="fld"> <!--#studio_lbl -->:</td>			<td class="val"> <!--#studio --> </td> </tr>
+<tr>	<td class="fld"> <!--#barcode_lbl -->:</td>		<td class="val"> <!--#barcode --> </td> </tr>
+<tr>	<td class="fld">  MPAA:</td>						<td class="val"> <!--#mpaa --> </td> </tr>
+<tr>	<td class="fld"> <!--#description_lbl -->:</td>	<td class="val"> <!--#description --> </td> </tr>
+<tr>	<td class="fld"> <!--#comments_lbl -->:</td>		<td class="val"> <!--#comments --> </td> </tr>
+</table>
+<!-- trailer/userfield НЕ во вложенной таблице: ссылка с длинным href внутри неё сжимает внешнюю таблицу width:100% примерно до 85% (дефект вьюера) -->
+<div><!--#trailer_lbl -->: <!--#trailer --></div>
+<div><!--#userfield --></div>
+<div><!--#episodes --></div>
+<!--#screenshots -->
+</td>
+</tr>
+</table>
+</body>
+</html>

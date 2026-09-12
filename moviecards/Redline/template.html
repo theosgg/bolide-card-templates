@@ -1,0 +1,128 @@
+﻿<HTML>
+<head>
+<style type="text/css">
+	body {
+		font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
+		background-color: #000000;
+		color: #ffffff;
+		font-size: 11pt;
+		margin: 0;
+		padding: 0.8em;
+	}
+	a:link    { color: #ffffff; text-decoration: none; }
+	a:visited { color: #ffffff; text-decoration: none; }
+	a:hover   { color: #ff3b3b; text-decoration: none; }
+
+	/* ---- красная шапка: была лентой из xc1/xh/xc2 ---- */
+	table.topbar { border-collapse: collapse; }
+	.topbar {
+		background-color: #cc0000;
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 11pt;
+		padding: 0.4em 0.9em;
+	}
+	.topbar a { color: #ffffff; }
+
+	table.card {
+		width: 100%;
+		border-collapse: collapse;
+		border: 0.35em solid #cc0000;
+		background-color: #000000;
+	}
+	td.leftcol  { width: 20em; vertical-align: top; padding: 1em; }
+	td.maincol  { vertical-align: top; padding: 1em 1em 1em 0; }
+
+	.box {
+		box-sizing: border-box;
+		border: 0.12em solid #cc0000;
+		padding: 0.7em 0.9em;
+		margin-bottom: 1em;
+	}
+	.box .bh3 {
+		font-size: 11pt;
+		font-weight: bold;
+		color: #ff5555;
+		margin: 0 0 0.4em 0;
+	}
+
+	.cover { width: 16em; margin: 0 auto; text-align: center; }
+	#cover { width: 100%; }
+
+	.h1title { font-size: 20pt; font-weight: bold; text-align: center; margin: 0 0 0.7em 0; line-height: 125%; }
+	.smallfont { font-size: 10pt; line-height: 175%; }
+	.smallfont b { color: #bbbbbb; font-weight: bold; }
+	.rate a { border: none; }
+
+	table.props { border-collapse: collapse; }
+	table.props td { font-size: 10pt; vertical-align: top; padding: 0.2em 0.5em 0.2em 0; }
+	table.props td.lbl { width: 9em; color: #bbbbbb; }
+	.screenshot { height: auto; }
+</style>
+</head>
+<BODY>
+
+<table class="topbar" width="100%" cellpadding="0" cellspacing="0"><tr><td class="topbar">&gt; <!--#originaltitle --></td></tr></table>
+
+<table class="card" width="100%">
+<tr>
+	<td class="leftcol">
+		<div class="box">
+			<div class="cover"><img SRC="_cover_" ID="cover" width="100%" border="0"></div>
+		</div>
+		<div class="box smallfont">
+			<div class="rate" align="center"><!--#rating --></div>
+			<div class="rate" align="center"><!--#myrating --></div>
+			<b><!--#mediatype_lbl -->:</b> <!--#mediatype -->
+			(<!--#mediacount -->)<br>
+			<b><!--#medialabel_lbl -->:</b> <!--#medialabel --><br>
+			<b><!--#medialocation_lbl -->:</b> <!--#medialocation --><br>
+			<b><!--#resolution_lbl -->:</b> <!--#resolution --><br>
+			<b><!--#quality_lbl -->:</b> <!--#quality --><br>
+			<b><!--#aspectratio_lbl -->:</b> <!--#aspectratio --><br>
+			<b><!--#filesize_lbl -->:</b> <!--#filesize --><br>
+			<b><!--#subtitles_lbl -->:</b> <!--#subtitles --><br>
+			<b><!--#vidinfo_lbl -->:</b> <!--#vidinfo --><br>
+			<b><!--#audinfo_lbl -->:</b> <!--#audinfo --><br>
+			<b><!--#loan_lbl -->:</b> <!--#loan --><br>
+			<div align="center"><!--#playbutton --></div>
+		</div>
+	</td>
+	<td class="maincol">
+		<div class="h1title"><!--#title --></div>
+
+		<div class="box">
+			<table class="props">
+			<tr><td class="lbl"><!--#year_lbl -->:</td><td><b><!--#year --></b></td></tr>
+			<tr><td class="lbl"><!--#genre_lbl -->:</td><td><b><!--#genre --></b></td></tr>
+			<tr><td class="lbl"><!--#country_lbl -->:</td><td><b><!--#country --></b></td></tr>
+			<tr><td class="lbl"><!--#director_lbl -->:</td><td><b><!--#director --></b></td></tr>
+			<tr><td class="lbl"><!--#scenario_lbl -->:</td><td><b><!--#scenario --></b></td></tr>
+			<tr><td class="lbl"><!--#studio_lbl -->:</td><td><b><!--#studio --></b></td></tr>
+			<tr><td class="lbl"><!--#duration_lbl -->:</td><td><b><!--#duration --></b></td></tr>
+			<tr><td class="lbl">MPAA:</td><td><b><!--#mpaa --></b></td></tr>
+			<tr><td class="lbl"><!--#barcode_lbl -->:</td><td><b><!--#barcode --></b></td></tr>
+			<tr><td class="lbl"><!--#movienum_lbl -->:</td><td><b><!--#movienum --></b></td></tr>
+			<tr><td class="lbl"><!--#date_lbl -->:</td><td><b><!--#date --></b></td></tr>
+			<tr><td class="lbl"><!--#price_lbl -->:</td><td><b><!--#price --></b></td></tr>
+			<tr><td class="lbl"><!--#seen_lbl -->:</td><td><!--#seen --></td></tr>
+			<tr><td class="lbl"><!--#wishlist_lbl -->:</td><td><!--#wishlist --></td></tr>
+			<tr><td class="lbl"><!--#personalmarks_lbl -->:</td><td><!--#personalmarks --></td></tr>
+			</table>
+			<div><!--#userfield --></div>
+			<div><!--#url --></div>
+			<div><!--#similar --></div>
+		</div>
+
+		<div class="box smallfont"><div class="bh3"><!--#actors_lbl --></div><!--#actors --></div>
+		<div class="box smallfont"><div class="bh3"><!--#description_lbl --></div><!--#description --></div>
+		<div class="box smallfont"><div class="bh3"><!--#comments_lbl --></div><!--#comments --></div>
+		<div class="box smallfont"><div class="bh3"><!--#episodes_lbl --></div><!--#episodes --></div>
+		<div class="box smallfont"><!--#trailer_lbl -->: <!--#trailer --></div>
+		<div class="box"><!--#screenshots width="200" --></div>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

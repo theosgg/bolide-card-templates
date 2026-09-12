@@ -1,0 +1,122 @@
+﻿<html>
+<head>
+<style type="text/css">
+	body {
+		font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+		background-color: #ffffff;
+		color: #2a2a2a;
+		font-size: 11pt;
+		margin: 0;
+	}
+	a       { color: #b0561c; text-decoration: none; }
+	a:hover { color: #2a2a2a; text-decoration: underline; }
+
+	/* ---- персиковая шапка ---- */
+	.header {
+		background-color: #f3d4bd;
+		border-top: 0.08em solid #d6b095;
+		border-bottom: 0.08em solid #d6b095;
+		padding: 0.5em 1.2em 0.6em 1.2em;
+		margin-top: 0.6em;
+	}
+	.header h1 { font-size: 22pt; font-weight: bold; margin: 0; line-height: 125%; }
+	.params { font-size: 10pt; color: #6b4a2e; padding-top: 0.2em; }
+	.params a { color: #6b4a2e; }
+	.rate a { border: none; text-decoration: none; }
+
+	table.card { width: 100%; border-collapse: collapse; }
+	td.leftcol { width: 17em; vertical-align: top; padding: 1em 1.2em 1.2em 1.2em; }
+	td.maincol { vertical-align: top; padding: 1em 1.4em 1.2em 0.2em; }
+
+	/* ---- обложка: контейнер в em, картинка тянется на 100% ---- */
+	.num { text-align: center; font-weight: bold; padding-bottom: 0.3em; }
+	.cover { width: 14.5em; margin: 0 auto; text-align: center; }
+	#cover { width: 100%; border: 0.08em solid #d6b095; }
+
+	/* ---- то самое ведро попкорна ---- */
+	.art { width: 11em; margin: 1.6em auto 0 auto; text-align: center; }
+	.art img { width: 100%; }
+
+	.other {
+		background-color: #f3d4bd;
+		border-top: 0.08em solid #d6b095;
+		border-bottom: 0.08em solid #d6b095;
+		font-size: 10pt;
+		padding: 0.4em 0.7em;
+		margin: 0.8em 0;
+	}
+	.description { padding-top: 0.6em; }
+	h2 { font-size: 13pt; margin: 0.6em 0 0.3em 0; }
+	h3 { font-size: 11pt; margin: 0.8em 0 0.2em 0; }
+	.links { padding-top: 0.9em; }
+	.role { padding-left: 2em; }
+	.screenshot { height: auto; }
+</style>
+</head>
+<body>
+
+<div class="header">
+	<h1><!--#title --></h1>
+	<div class="params">
+		<span class="rate"><!--#rating --></span>
+		<!--#originaltitle --> |
+		<!--#year --> |
+		<!--#country --> |
+		<!--#genre --> |
+		<!--#director_lbl -->: <!--#director --> |
+		<!--#duration --> |
+		<!--#mediatype -->
+		(<!--#mediacount -->) |
+		&quot;<!--#medialabel -->&quot; |
+		<!--#medialocation --> |
+		<!--#date -->
+	</div>
+</div>
+
+<table class="card">
+<tr>
+<td class="leftcol">
+	<div class="num">#<!--#movienum --></div>
+	<div class="cover"><img SRC="_cover_" ID="cover" width="100%"></div>
+	<div class="num"><span class="rate"><!--#myrating --></span></div>
+	<div class="num"><!--#playbutton --></div>
+	<div class="art"><img src="img/popcorn.jpg" width="100%"></div>
+</td>
+<td class="maincol">
+	<div>
+		<b><!--#actors_lbl --></b>: <!--#actors -->
+	</div>
+	<div class="other">
+		<!--#personalmarks --> |
+		<!--#mpaa --> |
+		<!--#resolution --> |
+		<!--#quality --> |
+		<!--#filesize --> |
+		<!--#subtitles --> |
+		<!--#aspectratio --> |
+		<!--#audcodec --> |
+		<!--#vidcodec --> |
+		<!--#barcode --> |
+		<span style="color:#c0392b;"><!--#loan_lbl -->: <!--#loan --></span>
+	</div>
+	<div class="description">
+		<h2><!--#description_lbl --></h2><div class="text"><!--#description --></div>
+		<div><!--#screenshots width="40%" --></div>
+	</div>
+	<div class="comm">
+		<h3><!--#comments_lbl --></h3><div><!--#comments --></div>
+	</div>
+	<div><!--#episodes --></div>
+	<div class="links">
+		<!--#url --> |
+		<!--#similar --> |
+		<!--#userfield --> |
+		<!--#wishlist_lbl --> <!--#wishlist --> |
+		<!--#seen_lbl --> <!--#seen -->
+	</div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+icon_path = -.aai
+icon_valign = center 

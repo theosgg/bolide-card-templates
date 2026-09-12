@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+<title>Book Card</title>
+<style>
+body {
+	font-family: Arial, 'Segoe UI', sans-serif;
+	background-color: #ffffff;
+	color: #001a34;
+	font-size: 11pt;
+	margin: 0;
+	padding: 1.2em;
+}
+a { text-decoration: none; color: #005bff; }
+a:hover { color: #004ed6; text-decoration: underline; }
+
+table.card { width: 100%; border-collapse: collapse; }
+td.covercol { width: 22em; vertical-align: top; padding: 0 1.6em 0 0; }
+td.maincol  { vertical-align: top; }
+
+.cover { width: 21em; text-align: center; }
+#cover { width: 100%; }
+.filemeta { color: #808d9a; font-size: 10.5pt; text-align: center; padding-top: 0.6em; line-height: 170%; }
+
+h1 { font-size: 22pt; font-weight: bold; margin: 0 0 0.15em 0; line-height: 125%; }
+h4 { font-size: 12pt; color: #808d9a; font-weight: normal; margin: 0 0 0.5em 0; }
+.rate { margin-bottom: 0.6em; }
+.rate a { border: none; }
+
+table.content { width: 100%; border-collapse: collapse; margin-top: 0.5em; }
+table.content td { padding: 0.35em 0.4em 0.35em 0; vertical-align: top; }
+td.lbl { width: 40%; color: #808d9a; font-size: 12pt; font-weight: normal; border-bottom: 0.08em dotted #ededf3; }
+td.val { font-size: 12pt; color: #001a34; border-bottom: 0.08em dotted #ededf3; }
+
+h2 { font-size: 14pt; margin: 1.2em 0 0.3em 0; }
+.text p { font-size: 11.5pt; font-weight: 500; line-height: 155%; margin: 0.4em 0 0 0; }
+.text hr { color: #d6dbe0; height: 0.08em; width: 100%; }
+.screenshot { height: auto; }
+</style>
+</head>
+<body>
+
+<table class="card">
+<tr>
+<td class="covercol">
+	<div class="cover"><img SRC="_cover_" ID="cover" width="100%"></div>
+	<div class="filemeta">
+		<!--#playbutton -->
+		<!--#filetype -->
+		<!--#playtime -->
+		<!--#filesize -->
+	</div>
+</td>
+<td class="maincol">
+	<h1>
+	<!--#booknum -->.
+	<!--#title -->
+	</h1>
+	<h4><!--#originaltitle --></h4>
+	<div class="rate">
+	<!--#rating -->
+	&nbsp;<!--#myrating -->
+	</div>
+
+	<table class="content">
+		<tr><td class="lbl"><!--#authors_lbl --></td><td class="val"><!--#authors --></td></tr>
+		<tr><td class="lbl"><!--#editors_lbl --></td><td class="val"><!--#editors --></td></tr>
+		<tr><td class="lbl"><!--#illustrators_lbl --></td><td class="val"><!--#illustrators --></td></tr>
+		<tr><td class="lbl"><!--#translators_lbl --></td><td class="val"><!--#translators --></td></tr>
+		<tr><td class="lbl"><!--#publisher_lbl --></td><td class="val"><!--#publisheryear --></td></tr>
+		<tr><td class="lbl"><!--#bindingtype_lbl --></td><td class="val"><!--#bindingtype --></td></tr>
+		<tr><td class="lbl"><!--#pages_lbl --></td><td class="val"><!--#pages --></td></tr>
+		<tr><td class="lbl"><!--#serie_lbl --></td><td class="val"><!--#serie --></td></tr>
+		<tr><td class="lbl"><!--#volume_lbl --></td><td class="val"><!--#volume --></td></tr>
+		<tr><td class="lbl"><!--#subject_lbl --></td><td class="val"><!--#subject --></td></tr>
+		<tr><td class="lbl"><!--#personalmarks_lbl --></td><td class="val"><!--#personalmarks --></td></tr>
+		<tr><td class="lbl"><!--#location_lbl --></td><td class="val"><!--#location --></td></tr>
+		<tr><td class="lbl"><!--#loan_lbl --></td><td class="val"><!--#loan --></td></tr>
+		<tr><td class="lbl">ISBN</td><td class="val"><!--#ISBN --></td></tr>
+		<tr><td class="lbl"><!--#price_lbl --></td><td class="val"><!--#price --></td></tr>
+		<tr><td class="lbl"><!--#language_lbl --></td><td class="val"><!--#language --></td></tr>
+		<tr><td class="lbl"><!--#loc_lbl --></td><td class="val"><!--#loc --></td></tr>
+		<tr><td class="lbl"><!--#dewey_lbl --></td><td class="val"><!--#dewey --></td></tr>
+		<tr><td class="lbl"><!--#dimensions_lbl --></td><td class="val"><!--#dimensions --></td></tr>
+		<tr><td class="lbl"><!--#circulation_lbl --></td><td class="val"><!--#circulation --></td></tr>
+		<tr><td class="lbl"><!--#date_lbl --></td><td class="val"><!--#date --></td></tr>
+		<tr><td class="lbl"><!--#dateread_lbl --></td><td class="val"><!--#dateread --></td></tr>
+		<tr><td colspan="2"><!--#url --></td></tr>
+	</table>
+</td>
+</tr>
+</table>
+
+<div class="text"><h2><!--#synopsis_lbl --></h2><p><!--#synopsis --></p></div>
+<div class="text"><h2><!--#contents_lbl --></h2><p><!--#contents --></p></div>
+<div class="text"><h2><!--#comments_lbl --></h2><p><!--#comments --></p></div>
+<div class="text"><p><!--#userfield --></p></div>
+<div class="text"><hr><!--#screenshots width="260" --></div>
+
+</body>
+</html>

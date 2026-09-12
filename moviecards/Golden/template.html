@@ -1,0 +1,142 @@
+﻿<HTML>
+<head>
+<style>
+	a:link{
+		color:#333;
+		text-decoration:underline;
+	}
+	body{
+	 	font-family:Segoe UI,Helvetica,Arial,sans-serif;
+	 	background: url('img/bg.jpg');
+	 }
+	 .header{
+	 	background:url('img/header.jpg') repeat-x #F8BC4E;
+		padding:2px 0 2px 20px;
+	 }
+	 .subheader{
+	 	font-size:13px;
+		color:#666;
+	 	background:#FCE4BA;
+		border-bottom:1px solid #F8BC4E;
+		padding:2px 0 2px 20px;
+	 }
+	 .movieImg{
+	 	width:20%;
+		text-align:center;
+	 }
+		 .movieImg img{
+			width:90%;
+			padding:2px 2px 2px 2px;
+			margin:2px;
+			border:1px solid #999;
+		 }
+	 .movieAbout{
+	 	width:80%;
+		vertical-align:top;
+	 }
+		 .movieAbout table{
+			width:100%;
+		 }
+		 .movieAbout tr{
+			background:#FFF9EC;
+			padding:2px 5px 2px 5px;
+			margin:1px 0;
+		 }
+	 	 .movieAbout span.title{
+		 	display:block;
+			float:left;
+			clear:right;
+		 	width:200px;
+			font-size:14px;
+			font-weight:bold;
+		 }
+		.movieAbout span.text{
+			font-size:16px;
+			color:#333;
+		}
+		.seen{
+			font-size:13px;
+		}
+		.description .text{
+			font-size:15px;
+		}
+		.comm div{
+			font-size:15px;
+			color:#666;
+		}
+	 h1{
+	 	font-size:24px;
+	 }
+	 
+</style>
+</head>	
+<body>
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2" class="header">
+			<h1><!--#title --></h1>
+		</td>
+	</tr>
+	<tr>	
+		<td colspan="2" class="subheader">
+			<!--#loan_lbl --> | <!--#loan --> |
+			<!--#mediatype --> |
+			<!--#mediacount --> |
+			&quot;<!--#medialabel -->&quot |
+			<!--#medialocation --> |
+			<!--#date --> |
+		</td>		
+	</tr>
+	<tr>
+		<td class="movieImg" valign="top">
+			<b>#<!--#movienum --></b>
+			<img SRC="_cover_" ID="cover">
+		</td>
+		<td class="movieAbout">
+			<table>
+				<tr><td><span class="title"><!--#originaltitle_lbl --></span></td><td><span class="text"><!--#originaltitle --></span></td></tr>
+				<tr><td><span class="title"><!--#country_lbl --></span></td><td><span class="text"><!--#country --></span></td></tr>
+				<tr><td><span class="title"><!--#year_lbl --></span></td><td><span class="text"><!--#year --></span></td></tr>
+				<tr><td><span class="title"><!--#studio_lbl --></span></td><td><span class="text"><!--#studio --></span></td></tr>
+				<tr><td><span class="title"><!--#genre_lbl --></span></td><td><span class="text"><!--#genre --></span></td></tr>
+				<tr><td><span class="title"><!--#director_lbl --></span></td><td><span class="text"><!--#director --></span></td></tr>
+				<tr><td><span class="title"><!--#actors_lbl --></span></td><td><span class="text"><!--#actors --></span></td></tr>
+				<tr><td><span class="title"><!--#rating_lbl --></span></td><td><span class="text">
+				<!--#rating -->
+				<!--#myrating -->
+				</span></td></tr>
+				<tr><td><span class="title"><!--#duration_lbl --></span></td><td><span class="text"><!--#duration --></span></td></tr>
+				<tr><td><span class="title"><!--#wishlist_lbl --></span></td><td><span class="text"><!--#wishlist --></span></td></tr>
+				<tr><td><span class="title"><!--#seen_lbl --></span></td><td><span class="text"><!--#seen --></span></td></tr>
+			</table>
+			<!-- url/userfield/similar НЕ во вложенной таблице: ссылка с длинным href внутри неё сжимает внешнюю таблицу width:100% примерно до 85% (дефект вьюера, найден бинарным поиском) -->
+			<div><!--#url --></div>
+			<div><!--#similar --></div>
+			<div><!--#userfield --></div>
+			<div class="description">
+				<h2><!--#description_lbl --></h2> <div class="text"><!--#description --></div>
+				<div><!--#screenshots width="40%" --></div>
+				<div class="comm">
+					<h3><!--#comments_lbl --></h3> 	<div><!--#comments --></div>
+				</div>
+			</div>
+			
+			<table>
+				<tr><td><span class="title"><!--#personalmarks_lbl --></span></td><td><span class="text"><!--#personalmarks --></span></td></tr>
+				<tr><td><span class="title">MPAA</span></td><td><span class="text"><!--#mpaa --></span></td></tr>
+				<tr><td><span class="title"><!--#quality_lbl --></span></td><td><span class="text"><!--#quality --></span></td></tr>
+				<tr><td><span class="title"><!--#resolution_lbl --></span></td><td><span class="text"><!--#resolution --></span></td></tr>
+				<tr><td><span class="title"><!--#filesize_lbl --></span></td><td><span class="text"><!--#filesize --></span></td></tr>
+				<tr><td><span class="title"><!--#subtitles_lbl --></span></td><td><span class="text"><!--#subtitles --></span></td></tr>
+				<tr><td><span class="title"><!--#aspectratio_lbl --></span></td><td><span class="text"><!--#aspectratio --></span></td></tr>
+				<tr><td><span class="title"><!--#audcodec_lbl --></span></td><td><span class="text"><!--#audcodec --></span></td></tr>
+				<tr><td><span class="title"><!--#vidcodec_lbl --></span></td><td><span class="text">><!--#vidcodec --></span></td></tr>
+				<tr><td><span class="title"><!--#audinfo_lbl --></span></td><td><span class="text"><!--#audinfo --></span></td></tr>
+				<tr><td><span class="title"><!--#vidinfo_lbl --></span></td><td><span class="text"><!--#vidinfo --></span></td></tr>
+				<tr><td><span class="title"><!--#barcode_lbl --></span></td><td><span class="text"><!--#barcode --></span></td></tr>
+			</table>
+		</td>	
+	</tr>
+</table>
+</body>
+</HTML>

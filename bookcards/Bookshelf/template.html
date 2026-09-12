@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Book Card</title>
+<style type="text/css">
+body {
+	font-family: 'Segoe UI', Tahoma, Helvetica, Arial, sans-serif;
+	background-color: #f4f1ea;
+	color: #333333;
+	font-size: 11pt;
+	line-height: 155%;
+	margin: 0;
+	padding: 1.2em;
+}
+a       { color: #00635d; text-decoration: none; }
+a:hover { color: #00635d; text-decoration: underline; }
+
+table.card {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #ffffff;
+	border: 0.08em solid #d8d8d8;
+}
+td.leftcol  { width: 17em; vertical-align: top; padding: 1.4em 1.2em 1.4em 1.4em; }
+td.maincol  { vertical-align: top; padding: 1.4em 1.6em 1.4em 0.6em; }
+
+.cover { width: 14em; margin: 0 auto; text-align: center; }
+#cover { width: 100%; border: 0.08em solid #d6d0c4; padding: 0.25em; background-color: #ffffff; }
+
+.shelf {
+	background-color: #409d69;
+	border: 0.08em solid #2f7d51;
+	color: #ffffff;
+	text-align: center;
+	font-weight: bold;
+	font-size: 10.5pt;
+	padding: 0.45em 0.6em;
+	margin: 1em 0 0.2em 0;
+}
+.shelf a { color: #ffffff; }
+
+.rate { text-align: center; padding: 0.7em 0 0.2em 0; }
+.rate a { border: none; }
+.ratelbl { text-align: center; color: #999999; font-size: 9.5pt; }
+
+h1 {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 22pt;
+	font-weight: normal;
+	color: #382110;
+	margin: 0 0 0.1em 0;
+	line-height: 128%;
+}
+.byline { font-size: 12.5pt; color: #333333; margin-bottom: 0.2em; }
+.byline .lead { color: #999999; }
+.serie { font-size: 11pt; color: #999999; margin-bottom: 0.9em; }
+
+h2 {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 13pt;
+	font-weight: normal;
+	color: #382110;
+	border-bottom: 0.08em solid #d8d8d8;
+	margin: 1.4em 0 0.5em 0;
+	padding-bottom: 0.2em;
+}
+.synopsis { font-size: 11pt; line-height: 165%; }
+
+table.details { width: 100%; border-collapse: collapse; border-top: 0.08em solid #d8d8d8; margin-top: 1.4em; }
+table.details td { vertical-align: top; padding: 0.22em 0.5em 0.22em 0; font-size: 10.5pt; }
+td.lbl { white-space: nowrap; color: #999999; }
+td.val { color: #333333; }
+
+.loan { color: #a33f2b; font-weight: bold; }
+.loan a { color: #a33f2b; }
+.screenshot { height: auto; }
+</style>
+</head>
+<body>
+
+<table class="card">
+<tr>
+<td class="leftcol">
+	<div class="cover"><img SRC="_cover_" ID="cover" width="100%" alt=""></div>
+
+	<div class="shelf"><!--#wishlist_lbl --> <!--#wishlist --></div>
+	<div class="shelf"><!--#unread_lbl --> <!--#unread --></div>
+
+	<div class="rate"><span class="ratelbl"><!--#rating_lbl --></span><br><!--#rating --></div>
+	<div class="rate"><span class="ratelbl"><!--#myrating_lbl --></span><br><!--#myrating --></div>
+	<div class="rate"><!--#playbutton --></div>
+</td>
+<td class="maincol">
+	<h1><!--#title --></h1>
+	<div class="byline"><span class="lead"><!--#authors_lbl -->:</span> <!--#authors --></div>
+	<div class="serie"><!--#originaltitle --></div>
+	<div class="serie"><!--#serie --> <!--#volume --></div>
+	<div class="loan"><!--#loan_lbl -->: <!--#loan --></div>
+
+	<div><h2><!--#synopsis_lbl --></h2><div class="synopsis"><!--#synopsis --></div></div>
+	<div><h2><!--#contents_lbl --></h2><div class="synopsis"><!--#contents --></div></div>
+	<div><h2><!--#comments_lbl --></h2><div class="synopsis"><!--#comments --></div></div>
+	<div><h2><!--#subject_lbl --></h2><div class="synopsis"><!--#subject --></div></div>
+
+	<table class="details">
+		<tr><td class="lbl"><!--#publisher_lbl --></td><td class="val"><!--#publisheryear --></td></tr>
+		<tr><td class="lbl"><!--#bindingtype_lbl --></td><td class="val"><!--#bindingtype --></td></tr>
+		<tr><td class="lbl"><!--#pages_lbl --></td><td class="val"><!--#pages --></td></tr>
+		<tr><td class="lbl"><!--#language_lbl --></td><td class="val"><!--#language --></td></tr>
+		<tr><td class="lbl">ISBN</td><td class="val"><!--#ISBN --></td></tr>
+		<tr><td class="lbl"><!--#dimensions_lbl --></td><td class="val"><!--#dimensions --></td></tr>
+		<tr><td class="lbl"><!--#circulation_lbl --></td><td class="val"><!--#circulation --></td></tr>
+		<tr><td class="lbl"><!--#editors_lbl --></td><td class="val"><!--#editors --></td></tr>
+		<tr><td class="lbl"><!--#translators_lbl --></td><td class="val"><!--#translators --></td></tr>
+		<tr><td class="lbl"><!--#illustrators_lbl --></td><td class="val"><!--#illustrators --></td></tr>
+		<tr><td class="lbl"><!--#loc_lbl --></td><td class="val"><!--#loc --></td></tr>
+		<tr><td class="lbl"><!--#dewey_lbl --></td><td class="val"><!--#dewey --></td></tr>
+		<tr><td class="lbl"><!--#playtime_lbl --></td><td class="val"><!--#playtime --></td></tr>
+		<tr><td class="lbl"><!--#filesize_lbl --></td><td class="val"><!--#filesize --></td></tr>
+	</table>
+
+	<table class="details">
+		<tr><td class="lbl"><!--#booknum_lbl --></td><td class="val"><!--#booknum --></td></tr>
+		<tr><td class="lbl"><!--#location_lbl --></td><td class="val"><!--#location --></td></tr>
+		<tr><td class="lbl"><!--#price_lbl --></td><td class="val"><!--#price --></td></tr>
+		<tr><td class="lbl"><!--#date_lbl --></td><td class="val"><!--#date --></td></tr>
+		<tr><td class="lbl"><!--#dateread_lbl --></td><td class="val"><!--#dateread --></td></tr>
+		<tr><td class="lbl"><!--#personalmarks_lbl --></td><td class="val"><!--#personalmarks --></td></tr>
+		<tr><td colspan="2"><!--#userfield --></td></tr>
+		<tr><td colspan="2"><!--#url --></td></tr>
+	</table>
+
+	<div><!--#screenshots width="200" --></div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

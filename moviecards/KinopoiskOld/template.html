@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<head>
+    <style >
+        * {
+            box-sizing: border-box;
+            vertical-align: text-top;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Tahoma, Helvetica;
+            font-size:20px;
+        }
+        td {
+            vertical-align: text-top;
+        }
+        h1 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 36px;
+            font-weight: normal;
+            font-family: Arial, Tahoma, Helvetica;
+        }
+        h2 {
+            font-weight: 100;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 30px;
+        }
+        .wrapper_outer {
+            background-color: #E4E4E4;
+            width: 100%;
+        }
+        .wrapper_inner {
+            background-color: #F5EFF1;
+            margin: 10px;
+            padding-top: 2px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+        }
+        .left_bar {
+            max-width: 20vw;
+            margin-right: 30px;
+        }
+        .img img {
+            width: 205px;
+        }
+        .img {
+            position: relative;
+            left: -15px;
+            top: 40px;
+        }
+        .centered {
+            text-align: center;
+        }
+        .undercover {
+            margin-top:80px;
+        }
+        .title {
+            height: fit-content;
+        }
+        .title span {
+            font-size: 16px;
+            color: #666;
+        }
+        .btn {
+            background-color: #9B9C9C;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+        .btn:hover {
+            color: #f60;
+        }
+        .infoTable {
+            height: fit-content;
+            margin-top: 40px;
+            display: table;
+            border-collapse: collapse;
+            border-spacing: 2px;
+        }
+        .infoTable td  {
+            border-bottom: 1px #999 dotted;
+            margin-top:5px;
+        }
+        .hr {
+            border-bottom: 1px #999 dotted;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .type {
+            padding: 9px 0 6px 20px;
+            width: 80px;
+            position: relative;
+            text-align: left;
+        }
+        .type span {
+            color: #f60;
+            font-size: 16px;
+        }
+        .info {
+            text-align: left;
+            font-size: 16px;
+            padding: 9px 15px 6px 20px;
+        }
+        .info span {
+            font-size: 16px;
+            white-space: nowrap;
+        }
+        .info a {
+            color: #005;
+        }
+        .info a:hover, .actor_list li a:hover {
+            color:#f60;
+        }
+        .episode a {
+            color: #005;
+        }
+        .episode a:hover, .actor_list li a:hover {
+            color:#f60;
+        }
+        .actors_table {width:100%;}
+        .actor_name {padding-right: 20px;}
+    </style>
+</head>
+<body bgcolor="#E4E4E4">
+<div class="wrapper_outer">
+    <div class="wrapper_inner">
+        <table>
+            <tr>
+                <td>
+                    <div class="left_bar">
+                        <div class="img">
+                            <img SRC="_cover_" ID="cover" >
+                        </div>
+                        <div class="undercover">
+                            <div class="centered"><!--#rating --></div>
+                            <div class="centered" style="padding-top:5px;"><!--#myrating --></div>
+                            <div class="info">
+                                <br>
+                                <!--#mediatype_lbl -->: <b><!--#mediatype --> </b>
+                                <br> <!--#medialabel_lbl -->: <b><!--#medialabel --> </b>
+                                <br> <!--#medialocation_lbl -->: <b><!--#medialocation --> </b>
+                                <br> <!--#filesize_lbl -->: <b><!--#filesize --> </b>
+                                <br> <!--#subtitles_lbl -->: <b><!--#subtitles --> </b>
+                                <br> <!--#quality_lbl -->: <b><!--#quality --> </b>
+                                <br> <!--#resolution_lbl -->: <b><!--#resolution --> </b>
+                                <div style="position:relative;  left:75px;"> <!--#playbutton --></div>
+                                <br><font color="red"><!--#loan_lbl -->: <b><!--#loan --></b></font>
+                                <br><!--#wishlist_lbl -->: <label class="checkbox"><!--#wishlist --></label>
+                                <br><!--#seen_lbl -->: <!--#seen -->
+                                <br><!--#personalmarks_lbl -->: <!--#personalmarks -->
+                                <br>
+                                <br> <!--#date_lbl -->: <b><!--#date --> </b>
+                                <br><br><!--#url -->
+                                <br><br><!--#similar -->
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="title">
+                        <h1>
+                            <!--#movienum -->.&nbsp;
+                            <!--#title -->
+                        </h1>
+                        <span><!--#originaltitle --></span>
+                        <table class="infoTable">
+                            <tr><td class="type" style="border-bottom: 1px #999 dotted"><span><!--#year_lbl --></span></td><td class="info"><!--#year --></td></tr>
+                            <tr><td class="type"><span><!--#country_lbl --></span></td><td class="info"><!--#country --></td></tr>
+                            <tr><td class="type"><span><!--#genre_lbl --></span></td><td class="info"><!--#genre --></td></tr>
+                            <tr><td class="type"><span><!--#duration_lbl --></span></td><td class="info"><!--#duration --></td></tr>
+                            <tr><td class="type"><span><!--#director_lbl --></span></td><td class="info"><!--#director --></td></tr>
+                            <tr><td class="type"><span><!--#scenario_lbl --></span></td><td class="info"><!--#scenario --></td></tr>
+                            <tr><td class="type"><span><!--#actors_lbl --></span></td><td class="info"><!--#actors --></a></td></tr>
+                            <tr><td class="type"><span><!--#studio_lbl --></span></td><td class="info"><!--#studio --></a></td></tr>
+                            <tr><td class="type"><span><!--#trailer_lbl --></span></td><td class="info"><!--#trailer --></a></td></tr>
+                        </table>
+                        <div class="info">
+                            <div><!--#description --></div>
+                            <div class="hr"></div><div><!--#comments --></div>
+                            <div class="hr"></div><div><!--#episodes --></div>
+                            <div class="hr"></div><div><!--#userfield --></div>
+                        </div>
+                        <!--#screenshots width="360" -->
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

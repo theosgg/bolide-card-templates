@@ -1,0 +1,114 @@
+<HTML>
+<head>
+<style type="text/css">
+	body {
+		font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
+		background-color: #000000;
+		color: #ffffff;
+		font-size: 11pt;
+		margin: 0;
+		padding: 0.8em;
+	}
+	a:link    { color: #ffffff; text-decoration: none; }
+	a:visited { color: #ffffff; text-decoration: none; }
+	a:hover   { color: #ff3b3b; text-decoration: none; }
+
+	.topbar {
+		background-color: #cc0000;
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 11pt;
+		padding: 0.4em 0.9em;
+	}
+	.topbar a { color: #ffffff; }
+
+	table.card {
+		width: 100%;
+		border-collapse: collapse;
+		border: 0.35em solid #cc0000;
+		background-color: #000000;
+	}
+	td.leftcol  { width: 20em; vertical-align: top; padding: 1em; }
+	td.maincol  { vertical-align: top; padding: 1em 1em 1em 0; }
+
+	.box {
+		box-sizing: border-box;
+		border: 0.12em solid #cc0000;
+		padding: 0.7em 0.9em;
+		margin-bottom: 1em;
+	}
+	.box h3 {
+		font-size: 11pt;
+		font-weight: bold;
+		color: #ff5555;
+		margin: 0 0 0.4em 0;
+	}
+
+	.cover { width: 16em; margin: 0 auto; text-align: center; }
+	#cover { width: 100%; }
+
+	h1 { font-size: 20pt; font-weight: bold; text-align: center; margin: 0 0 0.7em 0; line-height: 125%; }
+	.smallfont { font-size: 10pt; line-height: 175%; }
+	.smallfont b { color: #bbbbbb; font-weight: bold; }
+	.rate a { border: none; }
+
+	table.props { border-collapse: collapse; }
+	table.props td { font-size: 10pt; vertical-align: top; padding: 0.2em 0.5em 0.2em 0; }
+	table.props td.lbl { width: 9em; color: #bbbbbb; }
+	.screenshot { height: auto; }
+</style>
+</head>
+<BODY>
+
+<div class="topbar">&gt; <!--#originaltitle --></div>
+
+<table class="card">
+<tr>
+	<td class="leftcol">
+		<div class="box">
+			<div class="cover"><img SRC="_cover_" ID="cover" width="100%" border="0"></div>
+		</div>
+		<div class="box smallfont">
+			<b><!--#dimensions_lbl -->:</b> <!--#dimensions --><br>
+			<b><!--#circulation_lbl -->:</b> <!--#circulation --><br>
+			<b><!--#bindingtype_lbl -->:</b> <!--#bindingtype --><br>
+			<b><!--#filesize_lbl -->:</b> <!--#filesize --><br>
+			<b><!--#location_lbl -->:</b> <!--#location --><br>
+			<b><!--#loan_lbl -->:</b> <!--#loan --><br>
+			<div align="center"><!--#playbutton --></div>
+		</div>
+	</td>
+	<td class="maincol">
+		<h1><!--#title --></h1>
+
+		<div class="box">
+			<table class="props">
+			<tr><td class="lbl"><!--#authors_lbl -->:</td><td><b><!--#authors --></b></td></tr>
+			<tr><td class="lbl"><!--#editors_lbl -->:</td><td><b><!--#editors --></b></td></tr>
+			<tr><td class="lbl"><!--#translators_lbl -->:</td><td><b><!--#translators --></b></td></tr>
+			<tr><td class="lbl"><!--#illustrators_lbl -->:</td><td><b><!--#illustrators --></b></td></tr>
+			<tr><td class="lbl"><!--#publisher_lbl -->:</td><td><b><!--#publisheryear --></b></td></tr>
+			<tr><td class="lbl"><!--#serie_lbl -->:</td><td><b><!--#serie --></b></td></tr>
+			<tr><td class="lbl"><!--#volume_lbl -->:</td><td><b><!--#volume --></b></td></tr>
+			<tr><td class="lbl"><!--#subject_lbl -->:</td><td><b><!--#subject --></b></td></tr>
+			<tr><td class="lbl"><!--#pages_lbl -->:</td><td><b><!--#pages --></b></td></tr>
+			<tr><td class="lbl"><!--#playtime_lbl -->:</td><td><b><!--#playtime --></b></td></tr>
+			<tr><td class="lbl">ISBN:</td><td><b><!--#ISBN --></b></td></tr>
+			<tr><td class="lbl"><!--#rating_lbl -->:</td><td class="rate"><!--#rating --></td></tr>
+			<tr><td class="lbl"><!--#myrating_lbl -->:</td><td class="rate"><!--#myrating --></td></tr>
+			<tr><td class="lbl"><!--#personalmarks_lbl -->:</td><td><!--#personalmarks --></td></tr>
+			<tr><td colspan="2"><!--#userfield --></td></tr>
+			<tr><td colspan="2"><!--#url --></td></tr>
+			</table>
+		</div>
+
+		<div class="box smallfont"><h3><!--#synopsis_lbl --></h3><!--#synopsis --></div>
+		<div class="box smallfont"><h3><!--#comments_lbl --></h3><!--#comments --></div>
+		<div class="box smallfont"><h3><!--#contents_lbl --></h3><!--#contents --></div>
+		<div class="box"><!--#screenshots width="200" --></div>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

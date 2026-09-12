@@ -1,0 +1,102 @@
+﻿<HTML>
+<head>
+<style type="text/css">
+
+	body, h1, h2, h3 {
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	a:link { color: #333333; text-decoration: underline; }
+	body {
+		font-family: Helvetica, Arial, 'Segoe UI', sans-serif;
+		background-color: #ffffff;
+		font-size: 11pt;
+		color: #333333;
+	}
+	.header {
+		background-color: #5e8fd0;
+		border-bottom: 0.1em solid #40679f;
+		padding: 0.5em 0 0.6em 1.4em;
+		color: #ffffff;
+	}
+	.header h1 { font-size: 17pt; }
+	.header span { font-size: 10pt; }
+	.header a { color: #ffffff; }
+	.header a:link { color: #ffffff; }
+	.header .rate a { border: none; text-decoration: none; }
+
+	.movieImg { width: 14em; text-align: center; vertical-align: top; padding-top: 0.5em; }
+	.movieImg img { width: 90%; padding: 0.15em; margin: 0.15em; border: 0.08em solid #999999; }
+
+	.movieAbout { vertical-align: top; font-size: 10pt; padding: 0.5em 0.8em 0.8em 0.8em; }
+	.movieAbout .links { padding-top: 0.8em; }
+	.description { padding-top: 0.8em; }
+	.description .text { font-size: 11pt; }
+	.comm { padding-top: 0.8em; }
+	.comm div { font-size: 10pt; color: #666666; }
+	h2 { font-size: 13pt; }
+	h3 { font-size: 11pt; }
+	.role { padding-left: 2em; }
+	.screenshot { height: auto; }
+
+</style>
+</head>
+<body>
+
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2" class="header">
+			<h1><!--#title --></h1>
+			<span class="rate">
+				<!--#rating -->
+				<!--#duration --> |
+				<!--#loan_lbl --> | <!--#loan --> |
+				<!--#mediatype --> |
+				&quot;<!--#medialabel -->&quot; |
+				<!--#medialocation --> |
+				<!--#date -->
+			</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="movieImg">
+			<b>#<!--#movienum --></b>
+			<img SRC="_cover_" ID="cover">
+		</td>
+		<td class="movieAbout">
+			<div>
+				<!--#originaltitle --> |
+				<!--#country --> |
+				<!--#year --> |
+				<!--#genre --> |
+				<!--#director -->
+			</div>
+			<div>
+				<!--#actors -->
+			</div>
+			<div>
+				<!--#personalmarks --> |
+				<!--#mpaa --> |
+				<!--#barcode -->
+			</div>
+			<div class="description">
+				<div><h2><!--#description_lbl --></h2><div class="text"><!--#description --></div></div>
+				<div><!--#screenshots width="260" --></div>
+			</div>
+			<div class="comm"><h3><!--#comments_lbl --></h3><div><!--#comments --></div></div>
+			<div><!--#episodes --></div>
+			<div class="links">
+				<!--#url -->
+				<!--#similar -->
+				<!--#userfield -->
+				<!--#wishlist_lbl --> <!--#wishlist -->
+				<!--#seen_lbl --> <!--#seen -->
+				<!--#playbutton -->
+			</div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</HTML>

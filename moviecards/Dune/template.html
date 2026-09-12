@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>All My Movies:: Movie Card</title>
+  <style type="text/css">
+
+.Film { 
+position: absolute; top: 60px; left: 70px;
+width: 1640px; height: 60px;
+text-align: center;
+font-family: Arial;
+color: yellow;
+font-size: 52px;
+overflow: hidden;
+}
+
+.FilmOrig { 
+position: absolute; top: 120px; left: 70px;
+width: 1640px; height: 60px;
+text-align: center;
+font-family: Arial;
+color: yellow;
+font-size: 40px;
+overflow: hidden;
+}
+
+.Film_Year{
+position: absolute; top: 85px; left: 1710px;
+width: 150px; height: 70px;
+text-align: center;
+font-family: Arial;
+font-size: 52px;
+color: silver;
+overflow: hidden;
+}
+div.Film_Year a:link, div.Film_Year a:visited {color:silver;text-decoration:none;}
+div.Film_Year a:hover, div.Film_Year a:active {color:silver;text-decoration:underline;}
+
+.Country {
+position: absolute; top: 200px; left: 600px;
+width: 1250px; height: 40px;
+text-align: justify;
+font-size: 30px;
+font-family: Arial;
+color: gray;
+text-decoration: none;
+overflow: hidden;
+}
+div.Country a:link, div.Country a:visited {color:gray;text-decoration:none;}
+div.Country a:hover, div.Country a:active {color:gray;text-decoration:underline;}
+
+.Director {
+position: absolute; top: 235px; left: 600px;
+width: 1250px; height: 40px;
+text-align: justify;
+font-size: 30px;
+font-family: Arial;
+color: gray;
+text-decoration: none;
+overflow: hidden;
+}
+div.Director a:link, div.Director a:visited {color:gray;text-decoration:none;}
+div.Director a:hover, div.Director a:active {color:gray;text-decoration:underline;}
+
+.Actors {
+position: absolute; top: 270px; left: 600px;
+color: gray;
+width: 1250px; height: 70px;
+font-size: 30px;
+font-family: Arial;
+overflow: hidden;
+}
+div.Actors a:link, div.Actors a:visited {color:gray;text-decoration:none;}
+div.Actors a:hover, div.Actors a:active {color:gray;text-decoration:underline;}
+
+.Film_Description {
+position: absolute; top: 340px; left: 600px;
+width: 1250px; height: 620px;
+text-align: justify;
+font-size: 30px;
+font-family: Arial;
+color: gray;
+text-decoration: none;
+overflow: hidden;
+}
+
+.Duration{
+font-family: Arial;
+color: silver; 
+font-size: 40px;
+position: absolute; top: 990px; left: 1640px;
+width: 200px; height: 52px;
+text-align: right;
+overflow: hidden;
+}
+
+.Film_Cover{
+position: absolute; top: 235px; left: 60px;
+}
+
+.Genre{
+position: absolute; top: 990px; left: 600px;
+width: 1200px; height: 52px;
+font-family: Arial;
+color: silver; 
+font-size: 40px;
+overflow: hidden;
+}
+div.Genre a:link, div.Genre a:visited {color:silver;text-decoration:none;}
+div.Genre a:hover, div.Genre a:active {color:silver;text-decoration:underline;}
+
+.MPAA{
+position: absolute; top: 990px; left: 60px;
+width: 500px; height: 52px;
+font-family: Arial;
+color: Silver; 
+font-size: 40px;
+text-align: center;
+}
+div.MPAA a:link, div.MPAA a:visited {color:Silver;text-decoration:none;}
+div.MPAA a:hover, div.MPAA a:active {color:Silver;text-decoration:underline;}
+
+.Rating { 
+position: absolute; top: 185px; left: 60px;
+width: 505px; 
+text-align: center;
+}
+
+.Disk{
+position: absolute; top: 200px; left: 1690px;
+width: 150px; height: 40px;
+text-align: right;
+font-family: Arial;
+font-size: 30px;
+color: gray;
+overflow: hidden;
+}
+div.Disk a:link, div.Disk a:visited {color:gray;text-decoration:none;}
+div.Disk a:hover, div.Disk a:active {color:gray;text-decoration:underline;}
+
+.Play { 
+position: absolute; top: 910px; left: 60px;
+width: 505px; height: 50px;
+text-align: center;
+font-family: Arial;
+color: Silver;
+font-size: 30px;
+overflow: hidden;
+}
+
+hr { color: grey;
+}
+
+</head>
+<!--#alt_names_only -->
+<!--#forceplainactors -->
+
+
+<body leftmargin="0" topmargin="0" bgcolor=black>
+<img src="img/bkg-page.jpg">
+<div class="Film"><!--#title --></div>
+<div class="FilmOrig"><!--#originaltitle --></div>
+<div class="Film_Year"><!--#year --></div>
+<div class="Country"><font color="Silver"><!--#country_lbl -->:</font> <!--#country --></div>
+<div class="Director"><font color="Silver"><!--#director_lbl -->:</font> <!--#director --></div>
+<div class="Actors"><font color="Silver"><!--#actors_lbl --></i>:</font> <!--#actors --></div>
+<div class="Film_Description"><hr><!--#description --></div>
+<div class="Duration"><!--#duration --></div>
+<div class="Film_Cover"><img src="_cover_" id="cover" alt="" height="660" width="505"></div>
+<div class="Genre"><!--#genre_lbl -->: <!--#genre --></div>
+<div class="MPAA">MPAA: <!--#mpaa --></div>
+<div class="Rating"><p><!--#rating --></p></div>
+<div class="Disk"><!--#medialabel --></div>
+<div class="Play"><!--#userfield name="Play" --></div>
+
+</body>
+</html>

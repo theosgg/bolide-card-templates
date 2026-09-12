@@ -1,0 +1,7 @@
+use_icon_view = yes
+num_cols = 5
+num_rows = 2
+icon_top = 15
+icon_bottom = 0
+caption_font_size = small
+text_bottom = 0
