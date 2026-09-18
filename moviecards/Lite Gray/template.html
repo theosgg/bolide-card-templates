@@ -1,0 +1,145 @@
+﻿<html>
+<head>
+<style type="text/css">
+body {
+	font-family: Tahoma, Verdana, 'Segoe UI', Arial, sans-serif;
+	font-size: 10pt;
+	background-color: #d0d5dd;
+	color: #243052;
+	margin: 0.6em;
+}
+a { color: #243052; text-decoration: none; }
+a:hover { color: #ffffff; text-decoration: underline; }
+p { margin: 0; }
+
+table.card { width: 100%; border-collapse: collapse; }
+table.card td { vertical-align: top; }
+
+td.head_l { padding: 0.4em 0.5em; }
+td.head_r { padding: 0.4em 0.5em; text-align: right; }
+.title { font-size: 14pt; font-weight: bold; color: #728199; }
+.media { line-height: 150%; }
+.loan { color: #c00000; font-weight: bold; }
+
+td.leftcol { width: 15em; padding: 0.4em 0.5em; }
+td.maincol { padding: 0.4em 0.5em; }
+
+.poster { width: 14em; border: 0.1em solid #728199; background-color: #b8c0cc; }
+.poster .num {
+	text-align: center;
+	font-weight: bold;
+	color: #728199;
+	padding: 0.5em 0.3em;
+	background-color: #d0d5dd;
+	border-bottom: 0.1em solid #728199;
+}
+.poster .pic { padding: 0.35em; text-align: center; }
+#cover { width: 100%; }
+.stars { text-align: center; margin-top: 0.5em; }
+.stars a { border: none; }
+.stars a:hover { text-decoration: none; }
+.playrow { text-align: center; margin-top: 0.5em; }
+
+table.info { width: 100%; border-collapse: separate; border-spacing: 0.15em; }
+td.td_title {
+	width: 9.5em;
+	background-color: #acb3bf;
+	padding: 0.3em 0.4em;
+	vertical-align: top;
+}
+td.td_value {
+	background-color: #bcc3ce;
+	padding: 0.3em 0.4em;
+	text-align: right;
+	vertical-align: top;
+}
+td.td_value h2 { font-size: 12pt; font-weight: bold; margin: 0; }
+td.td_wide { padding: 0.3em 0.4em; text-align: right; }
+td.td_left { padding: 0.3em 0.4em; text-align: left; }
+
+.section { padding: 0.6em 0.5em; text-align: center; }
+.section b { color: #728199; font-size: 11pt; }
+.section p { text-align: justify; margin-top: 0.3em; }
+.screenshot { height: 11em; }
+.links { text-align: right; padding: 0.2em 0.5em; }
+.episodes { padding: 0.4em 0.5em; }
+</style>
+</head>
+<body>
+<table class="card">
+<tr>
+	<td class="head_l"><span class="title"><!--#title --></span></td>
+	<td class="head_r">
+		<div class="loan"><!--#loan_lbl -->: <!--#loan --></div>
+		<div class="media">
+			<!--#mediatype -->
+			(<!--#mediacount -->)
+			&quot;<!--#medialabel -->&quot;
+			<!--#medialocation -->
+			(<!--#date -->)
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="leftcol">
+		<div class="poster">
+			<div class="num">#<!--#movienum --></div>
+			<div class="pic"><img SRC="_cover_" ID="cover" width="100%"></div>
+		</div>
+		<div class="stars"><!--#rating --></div>
+		<div class="stars"><!--#myrating --></div>
+		<div class="playrow"><!--#playbutton --></div>
+	</td>
+	<td class="maincol">
+		<table class="info">
+		<tr><td class="td_title"><!--#originaltitle_lbl --></td><td class="td_value"><h2><!--#originaltitle --></h2></td></tr>
+		<tr><td class="td_title"><!--#country_lbl --></td><td class="td_value"><!--#country --></td></tr>
+		<tr><td class="td_title"><!--#year_lbl --></td><td class="td_value"><!--#year --></td></tr>
+		<tr><td class="td_title"><!--#studio_lbl --></td><td class="td_value"><!--#studio --></td></tr>
+		<tr><td class="td_title"><!--#genre_lbl --></td><td class="td_value"><!--#genre --></td></tr>
+		<tr><td class="td_title"><!--#director_lbl --></td><td class="td_value"><!--#director --></td></tr>
+		<tr><td class="td_title"><!--#scenario_lbl --></td><td class="td_value"><!--#scenario --></td></tr>
+		<tr><td class="td_title"><!--#actors_lbl --></td><td class="td_value"><!--#actors --></td></tr>
+		<tr><td class="td_title"><!--#duration_lbl --></td><td class="td_value"><!--#duration --></td></tr>
+		<tr><td class="td_title">MPAA</td><td class="td_value"><!--#mpaa --></td></tr>
+		<tr><td colspan="2" class="td_wide"><b><!--#wishlist_lbl -->:</b> <!--#wishlist --></td></tr>
+		<tr><td colspan="2" class="td_wide"><b><!--#seen_lbl -->:</b> <!--#seen --></td></tr>
+		<tr><td colspan="2" class="td_left"><!--#personalmarks_lbl -->: <!--#personalmarks --></td></tr>
+		</table>
+		<div class="links"><!--#url --></div>
+		<div class="links"><!--#similar --></div>
+		<div class="links"><!--#trailer_lbl -->: <!--#trailer --></div>
+		<div class="episodes"><!--#userfield --></div>
+	</td>
+</tr>
+<tr>
+	<td colspan="2" class="section"><b><!--#description_lbl -->:</b><p><!--#description --></p></td>
+</tr>
+<tr>
+	<td colspan="2" class="section"><!--#screenshots --></td>
+</tr>
+<tr>
+	<td colspan="2" class="section"><b><!--#comments_lbl -->:</b><p><!--#comments --></p></td>
+</tr>
+<tr>
+	<td colspan="2" class="episodes"><!--#episodes --></td>
+</tr>
+<tr>
+	<td colspan="2">
+		<table class="info">
+		<tr><td class="td_title"><!--#quality_lbl --></td><td class="td_value"><!--#quality --></td></tr>
+		<tr><td class="td_title"><!--#resolution_lbl --></td><td class="td_value"><!--#resolution --></td></tr>
+		<tr><td class="td_title"><!--#filesize_lbl --></td><td class="td_value"><!--#filesize --></td></tr>
+		<tr><td class="td_title"><!--#subtitles_lbl --></td><td class="td_value"><!--#subtitles --></td></tr>
+		<tr><td class="td_title"><!--#aspectratio_lbl --></td><td class="td_value"><!--#aspectratio --></td></tr>
+		<tr><td class="td_title"><!--#audcodec_lbl --></td><td class="td_value"><!--#audcodec --> <!--#audbitrate --></td></tr>
+		<tr><td class="td_title"><!--#vidcodec_lbl --></td><td class="td_value"><!--#vidcodec --> <!--#vidbitrate --></td></tr>
+		<tr><td class="td_title"><!--#audinfo_lbl --></td><td class="td_value"><!--#audinfo --></td></tr>
+		<tr><td class="td_title"><!--#vidinfo_lbl --></td><td class="td_value"><!--#vidinfo --></td></tr>
+		<tr><td class="td_title"><!--#barcode_lbl --></td><td class="td_value"><!--#barcode --></td></tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>

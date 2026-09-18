@@ -37,9 +37,9 @@ it (and `_old`) are ignored. No restart is needed after copying.
 | **Black Page**<br>![Black Page](screenshots/movies/Black%20Page.webp) | **Blue 3D**<br>![Blue 3D](screenshots/movies/Blue%203D.webp) | **Dune**<br>![Dune](screenshots/movies/Dune.webp) |
 | **Golden**<br>![Golden](screenshots/movies/Golden.webp) | **High Contrast**<br>![High Contrast](screenshots/movies/High%20Contrast.webp) | **Indian**<br>![Indian](screenshots/movies/Indian.webp) |
 | **Indian Dark**<br>![Indian Dark](screenshots/movies/Indian%20Dark.webp) | **KinopoiskOld**<br>![KinopoiskOld](screenshots/movies/KinopoiskOld.webp) | **LikelMDb**<br>![LikelMDb](screenshots/movies/LikelMDb.webp) |
-| **Popcorn**<br>![Popcorn](screenshots/movies/Popcorn.webp) | **Premiere**<br>![Premiere](screenshots/movies/Premiere.webp) | **Redline**<br>![Redline](screenshots/movies/Redline.webp) |
-| **Rusty Art**<br>![Rusty Art](screenshots/movies/Rusty%20Art.webp) | **Screenplay**<br>![Screenplay](screenshots/movies/Screenplay.webp) | **Short**<br>![Short](screenshots/movies/Short.webp) |
-| **Sidelined Gray**<br>![Sidelined Gray](screenshots/movies/Sidelined%20Gray.webp) | **Storefront**<br>![Storefront](screenshots/movies/Storefront.webp) | |
+| **Lite Gray**<br>![Lite Gray](screenshots/movies/Lite%20Gray.webp) | **Popcorn**<br>![Popcorn](screenshots/movies/Popcorn.webp) | **Premiere**<br>![Premiere](screenshots/movies/Premiere.webp) |
+| **Redline**<br>![Redline](screenshots/movies/Redline.webp) | **Rusty Art**<br>![Rusty Art](screenshots/movies/Rusty%20Art.webp) | **Screenplay**<br>![Screenplay](screenshots/movies/Screenplay.webp) |
+| **Short**<br>![Short](screenshots/movies/Short.webp) | **Sidelined Gray**<br>![Sidelined Gray](screenshots/movies/Sidelined%20Gray.webp) | **Storefront**<br>![Storefront](screenshots/movies/Storefront.webp) |
 
 ## Book card gallery (All My Books)
 
